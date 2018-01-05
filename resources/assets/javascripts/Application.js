@@ -146,7 +146,7 @@ class Application{
             } else if( hur == 24) {
                 hur--;
             }
-            var h = hur < 10 ? '0' + hur : hur
+            var h = hur < 10 ? '0' + hur : hur;
             return (h);
         }
         /*---------------------------------------------------------------------------------------*/
@@ -164,7 +164,7 @@ class Application{
             } else if( min == 60) {
                 min--;
             }
-            var m = min < 10 ? '0' + min : min
+            var m = min < 10 ? '0' + min : min;
             return (m);
         }
         function getSec(next) {
