@@ -38,7 +38,23 @@ class Application{
 
     initEvents(){
 
-            $('.whatch__full').on('click', function (event) {
+        var btns = document.getElementsByClassName("whatch__full");
+        var full = document.getElementsByClassName("full__fid");
+
+        for(var i = 0; i < btns.length; i++){
+            btns[i].setAttribute("current", i);
+            btns[i].onclick = function(){
+                event.preventDefault();
+                if(this.innerHTML == "Скрыть"){
+                    full[this.getAttribute("current")].style.display = "none";
+                    this.innerHTML = "Читать полностью";
+                }else{
+                    full[this.getAttribute("current")].style.display = "block";
+                    this.innerHTML = "Скрыть";
+                }
+            };
+        }
+            /*$('.whatch__full').on('click', function (event) {
                 event.preventDefault();
                 console.log(event);
                 if(!$('.full__fid').hasClass('full__fid-visible')){
@@ -48,7 +64,7 @@ class Application{
                     //event.preventDefault();
                     $('.full__fid').removeClass('full__fid-visible');
                 }
-            });
+            });*/
 
 
 
