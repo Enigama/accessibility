@@ -1,0 +1,138 @@
+footer
+  padding-bottom: 35px
+  //min-height: 500px
+
+.emotions
+  position: relative
+  text-align: center
+  padding-top: 50px
+
+
+
+.basil-first
+  background: url("../../images/basil-footer_second.png") no-repeat
+  top: 22%
+  right: 10%
+
+.basil-second
+  background: url("../../images/basil-footer_first.png") no-repeat
+  top: 60%
+  left: 16%
+
+.emotions__title
+  font-family: drina
+  font-size: 55px
+
+.slider > .slick-prev, .slider > .slick-next
+  background: url("../../images/slide-arrow-left.png") no-repeat
+  height: 65px
+  width: 65px
+  z-index: 9999
+  top: 40%
+
+  &:hover
+    background: url("../../images/slide-arrow-left.png") no-repeat
+  &:focus
+    background: url("../../images/slide-arrow-left.png") no-repeat
+
+.slider .slick-prev::before
+  display: none
+
+.slider .slick-next
+  right: 0px
+
+.emotions-slider > .slick-next
+  display: none
+
+.slider .slick-next::before
+  display: none
+
+.slider .slick-cloned
+  display: none
+
+.slider .slick-prev
+  left: 30%
+
+.slider .slick-next
+  right: 30%
+  transform: rotate(180deg)
+  transform-origin: 50% 21%
+
+.logo-slid
+  display: flex
+  justify-content: center
+  margin-top: 50px
+  margin-bottom: 50px
+
+.sub-title
+  //padding-top: 15px
+
+  &__text
+    display: block
+    font-family: gothamPB
+    font-size: 25px
+    color: #444444
+
+
+  &-list
+    display: flex
+    justify-content: center
+    padding-top: 15px
+
+    &__item
+      float: left
+      margin-right: 15px
+      font-family: gothamPBo
+      font-size: 16px
+      color: #919191
+
+
+    &__item::before
+      content: ''
+      display: inline-block
+      width: 10px
+      height: 10px
+      margin-left: 10px
+      margin-right: 10px
+      border-radius: 50px
+      background: #9ecb32
+
+.sub-title__btn
+  width: 225px
+  height: 50px
+  display: block
+  margin: 15px auto
+  line-height: 45px
+  border-radius: 50px
+  outline: none
+  font-family: gothamPB
+  font-size: 17px
+  background: #9ecb32
+  color: #fff
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(50, 50, 50, 0.5)
+  -moz-box-shadow:    0px 4px 20px 0px rgba(50, 50, 50, 0.5)
+  box-shadow:         0px 4px 20px 0px rgba(50, 50, 50, 0.5)
+
+  &:focus
+    outline: none
+
+.slick-slide:focus
+  outline: none
+
+.slider .slick-dots li.slick-active button:before
+  color: #9ecb32
+
+.slider .slick-dots li button
+  width: 30px
+  height: 30px
+
+//.slick-dots li button:hover
+  content: ''
+
+.slider .slick-dots li button:before
+  content: ''
+  width: 20px
+  height: 20px
+  border-radius: 50px
+  background-color: #9ecb32
+

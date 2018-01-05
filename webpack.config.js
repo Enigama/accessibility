@@ -72,7 +72,7 @@ module.exports = {
                 exclude: [path.resolve(__dirname, 'resources', 'assets', 'fonts')]
             },
             {
-                test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+                test: /\.(woff|woff2|eot|ttf|otf|svg)(\?.*$|$)/,
                 use: [
                     {
                         loader: 'file-loader',

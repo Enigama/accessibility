@@ -2,10 +2,256 @@
 
 {% block content %}
 <div class="container">
-    CONTENT
-
     <!-- EXAMPLE REQUIRE IMG -->
-    <img src="/assets/images/square.png" alt="">
-    <div style="background-image: url(${require('/assets/images/square3.png')}); height: 100px"></div>
+    {#<img src="/assets/images/square.png" alt="">#}
+    {#<div style="background-image: url(${require('/assets/images/square3.png')}); height: 100px"></div>#}
+
+    <div class="history">
+        <div class="history-create">
+            <div class="create__pepper"></div>
+            <div class="create__basil"></div>
+            <div class="history-content">
+                <h2 class="history__title history__text_white">Добавить свою<br>историю</h2>
+                <p class="history__text history__text_white">чтобы получить возможность<br> выиграть блюдо из твоих<br>воспоминаний</p>
+                <a class="simple__btn history__send history__send_white" href="#">Написать историю</a>
+                <p class="history__text history__text_top">Как мы будем определять<br> победителся конкурса?</p>
+                <a class="simple__btn history__chois history__text_white" href="#">Протокол выбора</a>
+            </div>
+        </div>
+
+        <div class="history-last">
+            <div class="bacon"></div>
+            <div class="basilick"></div>
+            <h2 class="history-last__titile">Последние истории</h2>
+	        <div class="history-last-slider slider ">
+		        <div class="history-slider slick-slide ">
+			        <div class="history-people">
+				        <div class="history-left">
+					        <div class="history-one">
+						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Алиса Краснодарова</h5>
+							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Кристина Кац</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Ева Алимова</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+				        <div class="history-right">
+					        <div class="history-one">
+						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Анна Кирилова</h5>
+							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="#" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+		        <div class="history-slider slick-slide ">
+			        <div class="history-people">
+				        <div class="history-left">
+					        <div class="history-one">
+						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Алиса Краснодаорова</h5>
+							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Кристина Кац</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Ева Алимова</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+				        <div class="history-right">
+					        <div class="history-one">
+						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Анна Кирилова</h5>
+							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+		        <div class="history-slider slick-slide ">
+			        <div class="history-people">
+				        <div class="history-left">
+					        <div class="history-one">
+						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Алиса Краснодаорова</h5>
+							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Кристина Кац</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Ева Алимова</h5>
+							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+				        <div class="history-right">
+					        <div class="history-one">
+						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Анна Кирилова</h5>
+							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+					        <div class="history-one">
+						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
+						        <div class="history-feed">
+							        <h5 class="logo-title">Олег Бондаренко</h5>
+							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
+							        <a href="" class="whatch__full">Читать полностью</a>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid victory">
+	{#absolut basil#}
+	<div class="basil basil__main__one"></div>
+	<div class="basil basil__main__second"></div>
+	<div class="basil basil__main__third"></div>
+	{##}
+    <div class="container">
+        <div class="victory-concurs">
+
+            <span class="victory__title">Победитель конкурса</span>
+            <span class="victory__text">Будет объявлен 20 ноября 2017 года</span>
+
+            <span class="victory__last__day">До  конца  конкурса  осталось:</span>
+		    {#js counter#}
+            <h1 class="logo__count">
+
+	            <div class="counter hours">
+		            <span class="decor top_h"></span>
+		            <span class="decor bottom_h"></span>
+		            <span class="from_h top_h"><span></span><span class="shadow_h"></span></span>
+		            <span class="from_h bottom_h"><span></span><span class="shadow_h"></span></span>
+		            <span class="to_h top_h"><span></span><span class="shadow_h"></span></span>
+		            <span class="to_h bottom_h"><span></span><span class="shadow_h"></span></span>
+	            </div>
+
+	            <div class="counter minutes">
+		            <span class="decor top_m"></span>
+		            <span class="decor bottom_m"></span>
+		            <span class="from_m top_m"><span></span><span class="shadow_m"></span></span>
+		            <span class="from_m bottom_m"><span></span><span class="shadow_m"></span></span>
+		            <span class="to_m top_m"><span></span><span class="shadow_m"></span></span>
+		            <span class="to_m bottom_m"><span></span><span class="shadow_m"></span></span>
+	            </div>
+
+	            <div class="counter seconds">
+		            <span class="decor top"></span>
+		            <span class="decor bottom"></span>
+		            <span class="from top"><span></span><span class="shadow"></span></span>
+		            <span class="from bottom"><span></span><span class="shadow"></span></span>
+		            <span class="to top"><span></span><span class="shadow"></span></span>
+		            <span class="to bottom"><span></span><span class="shadow"></span></span>
+	            </div>
+            </h1>
+            {##}
+            <div class="social">
+                <span class="social__news">Следите за новостями:</span>
+                <div class="social-logo">
+                    <div class="social-logo__item"><a class="social-logo__link" href=""><img src="/assets/images/vk-sm.png" alt="vkontakte"></a></div>
+                    <div class="social-logo__item"><a class="social-logo__link" href=""><img src="/assets/images/facebook-sm.png" alt="facebook"></a></div>
+                    <div class="social-logo__item"><a class="social-logo__link" href=""><img src="/assets/images/instagram-sm.png" alt="instagram"></a></div>
+	                <img class="small-dotted" src="/assets/images/small-dotted.png" alt="dotted-line">
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="rolling__line"></div>
 </div>
 {% endblock %}
