@@ -4,6 +4,24 @@
   background: url('../../images/bg-header.png') no-repeat
   background-size: cover
 
+  +media-1500
+    background-position-x: -75px
+
+  +media-1366
+    background-position-x: -135px
+
+  +media-1152
+    background-position-x: -225px
+
+  +media-1024
+    background-position-x: -280px
+
+  +media-955
+    background-position-x: -325px
+
+  +media-860
+    background-position-x: -365px
+
 .page--header::after
   position: absolute
   bottom: 0
@@ -20,14 +38,52 @@
   height: 90px
   background: url("../../images/arrow-small.png") no-repeat
 
+  +media-1280
+    left: -20px
+
+  +media-860
+    display: none
+
   
 .remember-right
   float: right
   margin-top: 100px
+
+  +media-1280
+    padding-right: 100px
+
+  +media-1225
+    padding-right: 60px
+
+  +media-955
+    padding-right: 20px
   
 .remember__title
   font-family: drina
   font-size: 120px
+
+  +media-1600
+    font-size: 95px
+
+  +media-1280
+    font-size: 75px
+
+  +media-1152
+    font-size: 65px
+
+  +media-955
+    font-size: 55px
+
+  +media-860
+    font-size: 70px
+    margin-right: 50px
+    display: block
+
+  +media-800
+    margin-right: 0px
+
+  +media-768
+    font-size: 65px
 
 .remember-text
   position: relative
@@ -38,6 +94,21 @@
   color: #9ecb32
   margin-left: 40px
 
+  +media-1600
+    font-size: 42px
+
+  +media-1280
+    margin-left: 22px
+    font-size: 32px
+
+  +media-1152
+    font-size: 30px
+    display: block
+    margin-top: 10px
+
+  +media-860
+    margin-left: 0px
+
 .remember__text
   font-family: gothamPM
   font-size: 18px
@@ -45,12 +116,34 @@
   color: #6c6c6c
   line-height: 27px
 
+  +media-1280
+    font-size: 16px
+    margin-left: 36px
+
+  +media-1152
+    font-size: 14px
+
+  +media-860
+    margin-right: 100px
+    margin-left: 0px
+
+  +media-768
+    margin-right: 0px
+
 .remember__text_new
   display: none
+
+  +media-860
+    display: block
 
 .remember__text_bold
   font-family: gothamPBo
   color: #000
+
+.remember__text_hide
+
+  +media-860
+    display: none
 
 .remember-step
   display: flex
@@ -58,34 +151,51 @@
   justify-content: space-around
   padding-top: 50px
 
-//.remember__step
-  width: 75px
-  height: 75px
+  +media-860
+    position: absolute
+    right: 10%
+    justify-content: space-between
+
 
 .step
   margin: 0 auto
   z-index: 1
   text-align: center
 
+  +media-860
+    margin-left: 10px
+
 .picture
   width: 144px
   height: 144px
-//&__one
-  //  width: 142px
-  //  height: 144px
-  //&__second
-  //  width: 144px
-  //  height: 143px
-  //&__third
-  //  width: 146px
-  //  height: 148px
+
+  +media-1600
+    width: 130px
+    height: 130px
+
+  +media-1280
+    width: 110px
+    height: 110px
+
+  +media-768
+    width: 125px
+    height: 125px
 
 .remember__step__title
   display: block
-  //text-align: center
   font-family: gothamPB
   font-size: 25px
   margin-top: 25px
+
+  +media-1600
+    margin-top: 18px
+    font-size: 22px
+
+  +media-900
+    font-size: 2vw
+
+  +media-768
+    font-size: 2.5vw
   
 .remember__step__text
   font-family: gothamPB
@@ -94,14 +204,58 @@
   color: #9ecb32
   margin-top: 10px
 
+  +media-1280
+    font-size: 18px
+
+  +media-900
+    font-size: 2vw
+
 .step-third
   margin-left: 40px
 
+  +media-1152
+    margin-left: 10px
+
+  +media-900
+    margin-left: 15px
+
+  +media-860
+    right: 0
+    margin-left: 15px
+
+  +media-768
+    font-size: 2.3vw
+
+
+
 .arrow-long
   position: absolute
-  right: 10%
-  bottom: 23%
+  right: 8%
+  bottom: 16%
   width: 50vw
+
+  +media-1600
+    right: 7%
+    bottom: 21%
+
+  +media-1280
+    right: 4%
+    bottom: 27%
+
+  +media-1024
+    bottom: 30%
+
+  +media-955
+    right: 0%
+    width: 55vw
+
+  +media-860
+    right: -10%
+    bottom: 40%
+    width: 60vw
+
+  +media-768
+    width: 66vw
 
 /*AUTSIDE SHEETS*/
 .sheet
@@ -109,260 +263,58 @@
   width: 100px
   height: 100px
 
-  &__one
-    //background: url("../../images/sheets-one.png") no-repeat
-    left: 9%
-    top: 65%
-  &__second
-    //background: url("../../images/sheets-second.png") no-repeat
-    left: 13%
-    top: 81%
-  &__third
-    //background: url("../../images/sheets-third.png") no-repeat
-    top: 20%
-    right: 10%
-  &__four
-    //background: url("../../images/sheets-four.png") no-repeat
-    top: 83%
-    right: 8%
-
-
-+media-1600
-
-  .remember__title
-    font-size: 95px
-
-  .remember__sub
-    font-size: 42px
-
-  .arrow-long
-    right: 7%
-    bottom: 28%
-
-  .picture
-    width: 130px
-    height: 130px
-
-  //.step
-  //  &__one
-  //    width: 130px
-  //    height: 130px
-  //  &__second
-  //    width: 130px
-  //    height: 130px
-  //  &__third
-  //    width: 130px
-  //    height: 130px
-
-  .remember__step__title
-    margin-top: 18px
-    font-size: 22px
-    
-+media-1500
-  .page--header
-    background-position-x: -75px
-
-+media-1366
-  .page--header
-    background-position-x: -135px
-
-+media-1280
-
-  .remember-right
-    padding-right: 100px
-
-  .remember__title
-    font-size: 75px
-
-  .remember-text::before
-    left: -20px
-
-  .remember__sub
-    margin-left: 22px
-    font-size: 32px
-
-  .remember__text
-    font-size: 16px
-    margin-left: 36px
-
-  .picture
-    width: 110px
-    height: 110px
-
-  .remember__step__text
-    font-size: 18px
-
-  .arrow-long
-    right: 4%
-    bottom: 33%
-
-+media-1225
-  .remember-right
-    padding-right: 60px
-
-
-+media-1152
-
-
-
-  .page--header
-    background-position-x: -225px
-
-  .step-third
-    margin-left: 10px
-
-
-  .remember__text
-    font-size: 14px
-
-  .remember__title
-    font-size: 65px
-
-  .remember__sub
-    font-size: 30px
-    display: block
-    margin-top: 10px
-
-  .sheet__third
-    right: 5%
-  .sheet__four
-    right: 0
-
-+media-1024
-  .page--header
-    background-position-x: -280px
-
-  .arrow-long
-    bottom: 34%
-
-+media-955
-  .remember-right
-    padding-right: 20px
-
-  .arrow-long
-    right: 0%
-    width: 55vw
-
-  .remember__title
-    font-size: 55px
-
-  .page--header
-    background-position-x: -325px
-
-  .bacon
-    width: 100px
-
-+media-900
-  .remember__step__title
-    font-size: 2vw
-
-  .remember__step__text
-    font-size: 2vw
-
-  .step-third
-    margin-left: 15px
-
-+media-860
-
-  .page--header
-    background-position-x: -365px
-
-  .remember__text_hide
-    display: none
-  .remember__text_new
-    display: block
-
-  .remember__text
-    margin-right: 100px
-    margin-left: 0px
-  .remember__sub
-    margin-left: 0px
-
-  .remember-text::before
-    display: none
-
-  .remember-step
-    position: absolute
-    right: 10%
-    justify-content: space-between
-
-  .sheet__third
-    right: 0
-
-  .arrow-long
-    right: -10%
-    width: 60vw
-
-  .step
-    margin-left: 10px
-
-  .step-third
-    margin-left: 15px
-
-  .remember__title
-    font-size: 70px
-
-  .remember__title
-    margin-right: 50px
-    display: block
-
-  .sheet
+  +media-860
     position: absolute
     width: 65px
     height: 65px
 
-  .sheet__third
-    top: 23%
-
-+media-800
-  .remember__title
-    margin-right: 0px
-
-
-+media-768
-
-  .sheet__one
-    left: 10%
-    top: 20%
-
-  .sheet__third
-    right: 5%
-    top: 20%
-
-  .sheet__four
-    top: 92%
-    right: 18%
-
-
-  .sheet
+  +media-768
     width: 80px
     height: 85px
     z-index: 2
 
-  .sheet__second
-    top: 85%
+  &__one
+    left: 9%
+    top: 65%
 
-  .remember__text
-    margin-right: 0px
+    +media-768
+      left: 10%
+      top: 20%
 
-  .remember__title
-    font-size: 65px
+  &__second
+    left: 13%
+    top: 81%
 
-  .picture
-    width: 125px
-    height: 125px
+    +media-768
+      top: 85%
 
-  .arrow-long
-    width: 66vw
+  &__third
+    top: 20%
+    right: 10%
 
-  //.step
-    margin-left: 15px
+    +media-1152
+      right: 5%
 
-  //.step-third
-    margin-left: 15px
+    +media-860
+      top: 23%
 
-  .remember__step__title
-    font-size: 2.5vw
+    +media-768
+      right: 5%
+      top: 20%
 
-  .remember__step__text
-    font-size: 2.3vw
+  &__four
+    top: 83%
+    right: 8%
+
+    +media-1500
+      right: 0
+
+    +media-1152
+      right: 0
+
+    +media-768
+      top: 92%
+      right: 18%
+
+
+
