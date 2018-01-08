@@ -10,9 +10,37 @@ class Application {
   constructor () {
     console.log('application start')
 
+    this.initMobileMenu()
     this.initEventSlick()
     this.initEvents()
   }
+
+  initMobileMenu(){
+    $('.btn-gamb').on('click', function () {
+        //if($('.mobile-menu').hasClass('mobile-menu-active')){
+           /* $('.mobile-menu').removeClass('mobile-menu-active');
+            $('.btn-gamb').removeClass('btn-gamb-active');
+            $('.btn-cencel').removeClass('btn-cencel-active');
+            $('.mobile-menu-content').removeClass('mobile-menu-content-active');*/
+        //}else {
+            $('.mobile-menu').removeClass('mobile-menu-disable');
+            $('.mobile-menu').addClass('mobile-menu-active');
+            $('.btn-gamb').addClass('btn-gamb-destroy');
+            $('.btn-cencel').addClass('btn-cencel-active');
+            $('.mobile-menu-content').addClass('mobile-menu-content-active');
+
+        //}
+    });
+    $('.btn-cencel').on('click', function () {
+        $('.mobile-menu').removeClass('mobile-menu-active');
+        $('.mobile-menu').addClass('mobile-menu-disable');
+        $('.btn-gamb').removeClass('btn-gamb-destroy');
+        $('.btn-cencel').removeClass('btn-cencel-active');
+        $('.mobile-menu-content').removeClass('mobile-menu-content-active');
+    });
+
+  }
+
 
   initEventSlick () {
 
@@ -30,6 +58,12 @@ class Application {
     $('.footer-slider').slick({
       dots: true,
       //variableWidth: false,
+
+        breakpoint: 576,
+        settings:{
+          slidesToShow: 1,
+            slidesToScroll:1
+        }
 
     })
   }
@@ -52,17 +86,7 @@ class Application {
         }
       }
     }
-    /*$('.whatch__full').on('click', function (event) {
-        event.preventDefault();
-        console.log(event);
-        if(!$('.full__fid').hasClass('full__fid-visible')){
-            //event.preventDefault();
-            $('.full__fid').addClass('full__fid-visible');
-        }else {
-            //event.preventDefault();
-            $('.full__fid').removeClass('full__fid-visible');
-        }
-    });*/
+
 
     var currTime = getTime()
     var hour = 0,

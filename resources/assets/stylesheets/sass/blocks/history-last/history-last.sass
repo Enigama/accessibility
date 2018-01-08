@@ -1,0 +1,256 @@
+
+.history-last
+  position: relative
+  float: right
+
+  +media-992
+    float: none
+
+  &__titile
+    text-align: center
+    font-family: drina
+    font-size: 55px
+    color: #444
+
+.history-last > .slick-slider
+  width: 795px
+
+  +media-1152
+    width: 700px
+
+  +media-1000
+    width: 68vw
+
+  +media-992
+    width: 100%
+
+
+.bacon
+  position: absolute
+  left: 13%
+
+  +media-1152
+    left: 5%
+
+  +media-992
+    left: 20%
+
+  +media-900
+    left: 16%
+
+  +media-800
+    left: 12%
+
+  +media-720
+    width: 75px
+    top: 5%
+
+  +media-576
+    display: none
+
+
+.basilick
+  position: absolute
+  top: -3%
+  right: 10%
+
+  +media-992
+    right: 23%
+
+  +media-900
+    right: 20%
+
+  +media-800
+    right: 16%
+
+  +media-685
+    right: 10%
+
+  +media-576
+    display: none
+
+.history-people
+  position: relative
+  padding-top: 55px
+
+  +media-992
+    padding-top: 55px
+    display: flex
+    justify-content: space-around
+
+.history-left
+  float: left
+
+.history-left > .history-one
+  +media-1000
+    width: 32vw
+
+  +media-900
+    width: 34vw
+
+  +media-860
+    width: 340px
+
+  +media-685
+    width: 34vw
+
+.history-right > .history-one
+  +media-685
+    width: 34vw
+
+
+.history-one
+  width: 385px
+  min-height: 125px
+  margin-bottom: 25px
+
+  +media-1152
+    width: 340px
+
+
+.history__logo
+  float: left
+
+.history-feed
+  float: left
+  padding-left: 20px
+
+  +media-1152
+    padding-left: 10px
+
+.logo-title
+  font-family: gothamPBo
+  font-size: 16px
+  color: #444
+  padding-bottom: 10px
+
+.feed
+  font-family: gothamPL
+  font-size: 15px
+  line-height: 22px
+
+  +media-1152
+    font-size: 13px
+    line-height: 18px
+
+  +media-685
+    font-size: 1.9vw
+
+.whatch__full
+  display: block
+  font-family: gothamPBo
+  font-size: 15px
+  color: #9ecb33
+  margin-top: 10px
+  margin-bottom: 15px
+
+  &:hover
+    text-decoration: none
+    color: #9ecb33
+
+  &:focus
+    color: #9ecb33
+    outline: none
+
+.full__fid
+  display: none
+  font-family: gothamPL
+  font-size: 15px
+
+  +media-1152
+    font-size: 13px
+
+  &-visible
+    display: block
+
+.history-right
+  float: right
+
+  +media-1225
+    margin-right: 20px
+
+  +media-1152
+    margin-right: 0px
+
+.history-paginations
+  clear: both
+
+.paginations-list
+  width: 410px
+  margin: 0 auto
+
+.paginations__item
+  float: left
+  color: #fff
+
+  &_sircle
+    background: #d0d0d0
+    border-radius: 50px
+    margin-left: 10px
+    margin-right: 10px
+    padding: 20px 22px
+
+  &_active
+    background: #9ecb32
+    color: #fff
+
+  &:hover
+    text-decoration: none
+
+
+.history__prev, .history__next
+  z-index: 2
+  position: absolute
+  display: block
+  background: url("../../images/left-arrow-green.png") no-repeat
+  width: 25px
+  height: 25px
+  margin-top: 25px
+  margin-left: 10px
+  margin-right: 10px
+
+  &:hover
+    cursor: pointer
+
+.history__prev
+  bottom: -33px
+  left: 35%
+
+  +media-640
+    left: 33%
+
+  +media-576
+    left: 29%
+
+.history__next
+  transform: rotate(-180deg)
+  transform-origin: 50% 20%
+  right: 33%
+  bottom: -33px
+
+  +media-640
+    right: 30%
+
+  +media-576
+    right: 25%
+
+.history__pagin
+  padding: 10px 15px
+  border-radius: 50px
+  background: #d0d0d0
+  color: #fff
+
+  &:hover
+    color: #fff
+    background: #9ecb32
+
+
+.history-last-slider > ul > li
+  margin-left: 15px
+  margin-right: 15px
+
+.history-last-slider > ul > .slick-active > .history__pagin
+  background: #9ecb32
+
+.history-last-slider > .slick-dots
+  z-index: 1

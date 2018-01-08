@@ -1,5 +1,5 @@
 .page--header
-  min-height: 900px
+  min-height: 950px
   position: relative
   background: url('../../images/bg-header.png') no-repeat
   background-size: cover
@@ -16,11 +16,30 @@
   +media-1024
     background-position-x: -280px
 
+  +media-992
+    background-position-x: -335px
+
   +media-955
     background-position-x: -325px
 
   +media-860
     background-position-x: -365px
+
+  +media-768
+    background-position-x: -395px
+
+  +media-720
+    background-position-x: -475px
+
+  +media-685
+    background-position-x: -790px
+
+  +media-640
+    min-height: 820px
+
+  +media-576
+    background-position-x: -1100px
+
 
 .page--header::after
   position: absolute
@@ -57,6 +76,16 @@
 
   +media-955
     padding-right: 20px
+
+  +media-685
+    float: none
+    padding-right: 0
+
+  +media-640
+    margin-top: 160px
+
+  +media-576
+    margin-top: 195px
   
 .remember__title
   font-family: drina
@@ -85,8 +114,18 @@
   +media-768
     font-size: 65px
 
+  +media-685
+    text-align: center
+
+  +media-576
+    font-size: 75px
+
 .remember-text
   position: relative
+
+  +media-685
+    width: 340px
+    margin: 0 auto
 
 .remember__sub
   font-family: drina
@@ -109,6 +148,12 @@
   +media-860
     margin-left: 0px
 
+  +media-685
+    font-size: 34px
+
+  +media-576
+    font-size: 35px
+
 .remember__text
   font-family: gothamPM
   font-size: 18px
@@ -129,6 +174,10 @@
 
   +media-768
     margin-right: 0px
+
+  +media-576
+    font-size: 17px
+    margin-left: -25px
 
 .remember__text_new
   display: none
@@ -156,6 +205,14 @@
     right: 10%
     justify-content: space-between
 
+  +media-685
+    position: relative
+    justify-content: space-around
+    left: 0
+    right: 0
+
+  +media-576
+    flex-direction: column
 
 .step
   margin: 0 auto
@@ -164,6 +221,14 @@
 
   +media-860
     margin-left: 10px
+
+  +media-685
+    margin-left: 0
+    margin-right: 0
+
+  +media-576
+    margin-bottom: 30px
+
 
 .picture
   width: 144px
@@ -181,6 +246,14 @@
     width: 125px
     height: 125px
 
+  +media-685
+    width: 110px
+    height: 110px
+
+  +media-576
+    width: 130px
+    height: 130px
+
 .remember__step__title
   display: block
   font-family: gothamPB
@@ -196,7 +269,10 @@
 
   +media-768
     font-size: 2.5vw
-  
+
+  +media-576
+    font-size: 3.5vw
+
 .remember__step__text
   font-family: gothamPB
   display: block
@@ -209,6 +285,12 @@
 
   +media-900
     font-size: 2vw
+
+  +media-685
+    font-size: 2.3vw
+
+  +media-576
+    font-size: 3vw
 
 .step-third
   margin-left: 40px
@@ -226,32 +308,42 @@
   +media-768
     font-size: 2.3vw
 
+  +media-685
+    margin-left: 0
+
 
 
 .arrow-long
   position: absolute
   right: 8%
-  bottom: 16%
+  bottom: 19%
   width: 50vw
 
   +media-1600
     right: 7%
-    bottom: 21%
+    bottom: 25%
+
+  +media-1366
+    right: 3%
+
 
   +media-1280
-    right: 4%
-    bottom: 27%
+    right: 2%
+    bottom: 30%
 
   +media-1152
     width: 45vw
     right: 2%
-    bottom: 29%
+    bottom: 33%
 
   +media-1024
-    bottom: 30%
+    right: 2%
+    bottom: 32%
+    width: 52vw
 
   +media-955
     right: 0%
+    bottom: 33%
     width: 55vw
 
   +media-860
@@ -261,6 +353,14 @@
 
   +media-768
     width: 66vw
+
+  +media-685
+    width: 100vw
+    bottom: 32%
+    right: 0
+
+    +media-576
+      display: none
 
 /*AUTSIDE SHEETS*/
 .sheet
@@ -278,6 +378,10 @@
     height: 85px
     z-index: 2
 
+  +media-576
+    width: 50px
+    height: 50px
+
   &__one
     left: 9%
     top: 65%
@@ -286,12 +390,22 @@
       left: 10%
       top: 20%
 
+    +media-640
+      left: 2%
+
+    +media-576
+      left: 50%
+      top: 13%
+
   &__second
     left: 13%
     top: 81%
 
     +media-768
       top: 85%
+
+    +media-576
+      top: 80%
 
   &__third
     top: 20%
@@ -307,6 +421,11 @@
       right: 5%
       top: 20%
 
+    +media-576
+      right: 0
+      left: 13%
+      top: 45%
+
   &__four
     top: 83%
     right: 8%
@@ -320,6 +439,9 @@
     +media-768
       top: 92%
       right: 18%
+
+    +media-576
+      top:  65%
 
 
 

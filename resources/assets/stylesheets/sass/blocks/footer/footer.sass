@@ -7,21 +7,42 @@ footer
   text-align: center
   padding-top: 50px
 
+  +media-768
+    padding-left: 25px
+    padding-right: 25px
 
+.basil
+  +media-576
+    width: 65px
 
 .basil-first
-  //background: url("../../images/basil-footer_second.png") no-repeat
   top: 22%
   right: 10%
 
+  +media-1024
+    right: 5%
+
+  +media-768
+    top: 30%
+
 .basil-second
-  //background: url("../../images/basil-footer_first.png") no-repeat
   top: 60%
   left: 16%
+
+  +media-860
+    left: 10%
+
+  +media-768
+    left: 7%
+    top: 67%
+
 
 .emotions__title
   font-family: drina
   font-size: 55px
+
+  +media-768
+    font-size: 8.5vw
 
 .slider > .slick-prev, .slider > .slick-next
   background: url("../../images/slide-arrow-left.png") no-repeat
@@ -35,11 +56,12 @@ footer
   &:focus
     background: url("../../images/slide-arrow-left.png") no-repeat
 
+  +media-640
+    top: 33%
+
 .slider .slick-prev::before
   display: none
 
-.slider .slick-next
-  right: 0px
 
 .emotions-slider > .slick-next
   display: none
@@ -53,16 +75,39 @@ footer
 .slider .slick-prev
   left: 30%
 
+  +media-860
+    left: 25%
+
+  +media-768
+    left: 15%
+
+  +media-576
+    left: 10%
+
 .slider .slick-next
   right: 30%
   transform: rotate(180deg)
   transform-origin: 50% 21%
+
+  +media-860
+    right: 25%
+
+  +media-768
+    right: 15%
+
+  +media-576
+    right: 10%
 
 .logo-slid
   display: flex
   justify-content: center
   margin-top: 50px
   margin-bottom: 50px
+
+  &__item
+    +media-640
+      width: 200px
+      height: 200px
 
 .sub-title
   //padding-top: 15px
@@ -86,6 +131,8 @@ footer
       font-size: 16px
       color: #919191
 
+      +media-576
+        margin-right: 0
 
     &__item::before
       content: ''
@@ -98,6 +145,7 @@ footer
       background: #9ecb32
 
 .sub-title__btn
+  z-index: 999
   width: 225px
   height: 50px
   display: block
@@ -126,9 +174,6 @@ footer
   width: 30px
   height: 30px
 
-//.slick-dots li button:hover
-  content: ''
-
 .slider .slick-dots li button:before
   content: ''
   width: 20px
@@ -137,37 +182,4 @@ footer
   background-color: #9ecb32
 
 
-+media-1024
 
-  .basil-first
-    right: 5%
-
-+media-860
-  .slider .slick-prev
-    left: 25%
-  .slider .slick-next
-    right: 25%
-
-  .basil-second
-    left: 10%
-
-+media-768
-  .emotions
-    padding-left: 25px
-    padding-right: 25px
-
-  .emotions__title
-    font-size: 8.5vw
-
-  .slider .slick-next
-    right: 15%
-
-  .slider .slick-prev
-    left: 20%
-
-  .basil-first
-    top: 30%
-
-  .basil-second
-    left: 7%
-    top: 67%
