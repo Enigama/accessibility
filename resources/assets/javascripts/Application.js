@@ -46,26 +46,35 @@ class Application {
 
     $('.history-last-slider').slick({
       dots: true,
+
+      slidesToShow: 1,
+      slidesToScroll: 1,
+
       prevArrow: '<a href="#" class="history__prev"></a>',
       nextArrow: '<a href="#" class="history__next"></a>',
 
       customPaging: function (slider, i) {
-        var curslide = i + 1
+        var curslide = i + 1;
         return '<a class="history__pagin">' + curslide + '</a>'
       },
-    })
+
+      responsive: [{
+          breakpoint: 576,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+          }
+
+      }],
+
+    });
 
     $('.footer-slider').slick({
-      dots: true,
-      //variableWidth: false,
+        dots: true,
+        slidesToShow: 1,
 
-        breakpoint: 576,
-        settings:{
-          slidesToShow: 1,
-            slidesToScroll:1
-        }
 
-    })
+    });
   }
 
   initEvents () {

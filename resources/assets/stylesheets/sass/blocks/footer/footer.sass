@@ -131,8 +131,36 @@ footer
       font-size: 16px
       color: #919191
 
+      &:nth-child(1)
+        left: 20%
+
+        +media-500
+          left: 10%
+
+      &:nth-child(2)
+        right: 25%
+
+        +media-500
+          right: 15%
+
+      &:nth-child(3)
+        top: 55%
+        left: 20%
+
+        +media-500
+          left: 10%
+
+      &:nth-child(4)
+        top: 55%
+        right: 25%
+
+        +media-500
+          right: 15%
+
       +media-576
         margin-right: 0
+        float: none
+        position: absolute
 
     &__item::before
       content: ''
@@ -143,6 +171,11 @@ footer
       margin-right: 10px
       border-radius: 50px
       background: #9ecb32
+
+    +media-576
+      display: block
+      position: relative
+      min-height: 75px
 
 .sub-title__btn
   z-index: 999
