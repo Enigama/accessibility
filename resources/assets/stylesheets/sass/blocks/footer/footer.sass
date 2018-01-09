@@ -15,6 +15,9 @@ footer
   +media-576
     width: 65px
 
+  +media-356
+    width: 50px
+
 .basil-first
   top: 22%
   right: 10%
@@ -36,6 +39,11 @@ footer
     left: 7%
     top: 67%
 
+  +media-500
+    top: 60%
+
+  +media-356
+    left: 3%
 
 .emotions__title
   font-family: drina
@@ -43,6 +51,9 @@ footer
 
   +media-768
     font-size: 8.5vw
+
+  +media-380
+    font-size: 11vw
 
 .slider > .slick-prev, .slider > .slick-next
   background: url("../../images/slide-arrow-left.png") no-repeat
@@ -84,6 +95,9 @@ footer
   +media-576
     left: 10%
 
+  +media-500
+    display: none
+
 .slider .slick-next
   right: 30%
   transform: rotate(180deg)
@@ -97,6 +111,9 @@ footer
 
   +media-576
     right: 10%
+
+  +media-500
+    display: none
 
 .logo-slid
   display: flex
@@ -118,6 +135,8 @@ footer
     font-size: 25px
     color: #444444
 
+    +media-380
+      font-size: 5vw
 
   &-list
     display: flex
@@ -137,11 +156,17 @@ footer
         +media-500
           left: 10%
 
+        +media-380
+          left: 6%
+
       &:nth-child(2)
         right: 25%
 
         +media-500
           right: 15%
+
+        +media-380
+          right: 10%
 
       &:nth-child(3)
         top: 55%
@@ -150,6 +175,9 @@ footer
         +media-500
           left: 10%
 
+        +media-380
+          left: 6%
+
       &:nth-child(4)
         top: 55%
         right: 25%
@@ -157,10 +185,16 @@ footer
         +media-500
           right: 15%
 
+        +media-380
+          right: 10%
+
       +media-576
         margin-right: 0
         float: none
         position: absolute
+
+      +media-356
+        font-size: 13px
 
     &__item::before
       content: ''
