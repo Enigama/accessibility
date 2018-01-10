@@ -86,6 +86,7 @@ module.exports = {
                     path.resolve(__dirname, 'node_modules'),
                     path.resolve(__dirname, 'resources', 'assets', 'fonts')
                 ]
+
             },
             {test: /\.sass$/, use: sassExtractor()},
             {test: /\.scss$/, use: sassExtractor()},

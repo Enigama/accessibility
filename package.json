@@ -8,6 +8,7 @@
   },
   "author": "",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.23.0",
@@ -20,6 +21,7 @@
     "file-loader": "^0.11.2",
     "gulp": "^3.9.1",
     "html-loader": "^0.5.1",
+    "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.0",
     "node-bourbon": "^4.2.8",
     "node-reset-scss": "^1.0.1",
