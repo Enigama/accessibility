@@ -11,18 +11,16 @@ import 'slick-carousel/slick/slick.scss'
 
 class Application {
   constructor () {
-    console.log('application start')
+    console.log('application start');
 
-    this.initAnimate()
-    this.initMobileMenu()
-    this.initEventSlick()
-    this.initEvents()
+    this.initAnimate();
+    this.initMobileMenu();
+    this.initEventSlick();
+    this.initEvents();
 
   }
 
-  initAnimate(){
-      new WOW().init()
-  }
+
 
   initMobileMenu(){
     $('.btn-gamb').on('click', function () {
@@ -250,6 +248,16 @@ class Application {
       return (sec < 10 ? '0' + sec : sec)
     }
   }
+
+    initAnimate(){
+        $( window ).on( "load", anim );
+
+        function anim() {
+            new WOW().init();
+            console.log( "ready!" );
+        };
+
+    }
 }
 
 new Application()
