@@ -11,19 +11,21 @@ import 'slick-carousel/slick/slick.scss';
 
 class Application {
   constructor () {
-    console.log('application start')
+    console.log('application start');
 
-    this.initAnimate()
-    this.initMobileMenu()
-    this.initEventSlick()
-    this.initEvents()
+    this.initAnimate();
+    this.initMobileMenu();
+    this.initEventSlick();
+    this.initEvents();
 
   }
 
   initAnimate(){
     AOS.init();
 
-    setTimeout(() => AOS.refresh(true), 500)
+    $(window).on('load', () => {
+      setTimeout( () => AOS.refresh(true), 0 )
+    })
   }
 
   initMobileMenu(){
