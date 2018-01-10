@@ -1,12 +1,12 @@
 //VENDORS
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
-require('animate.css');
-require('wowjs/dist/wow.min');
+import AOS from 'aos'
 
-import 'slick-carousel/slick/slick.min'
-import 'slick-carousel/slick/slick-theme.scss'
-import 'slick-carousel/slick/slick.scss'
+
+import 'slick-carousel/slick/slick.min';
+import 'slick-carousel/slick/slick-theme.scss';
+import 'slick-carousel/slick/slick.scss';
 
 
 class Application {
@@ -21,7 +21,9 @@ class Application {
   }
 
   initAnimate(){
-      new WOW().init()
+    AOS.init();
+
+    setTimeout(() => AOS.refresh(true), 500)
   }
 
   initMobileMenu(){

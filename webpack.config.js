@@ -58,7 +58,8 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     presets: ["env"]
-                }
+                },
+                exclude: [ path.resolve(__dirname, 'node_modules') ]
             },{
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 use: [
