@@ -13,10 +13,10 @@ const config = {
 
     deploy: {
         dev: {
-            host:       'HOST',
-            user:       'USER',
-            password:   'PASS',
-            dir:        'DIR'
+            host:       'piudelcibopromo.rsrf.ru',
+            user:       'piudelcibo',
+            password:   'L7a8V8s6',
+            dir:        '/www/piudelcibopromo.rsrf.ru'
         },
         prod:{
             host:       'HOST',
@@ -30,7 +30,7 @@ const config = {
 gulp.task("webpack", function(callback) {
     // run webpack
     process.env.NODE_ENV = 'production';
-    process.env.ASSET_PATH = './';
+    process.env.ASSET_PATH = '/';
 
     let webpackConfig     = require('./webpack.config');
 
@@ -102,7 +102,7 @@ gulp.task('deploy:dev', ['build'], function () {
     const globs = [
         config.build + '/**/*',
     ];
-    return gulp.src(globs, { base: build, buffer: false })
+    return gulp.src(globs, { base: config.build, buffer: false })
         .pipe(conn.newer(config.deploy.dev.dir))
         .pipe(conn.dest(config.deploy.dev.dir));
 });
@@ -117,7 +117,7 @@ gulp.task('deploy:prod', ['build'], function () {
     const globs = [
         config.build + '/**/*',
     ];
-    return gulp.src(globs, { base: build, buffer: false })
+    return gulp.src(globs, { base: config.build, buffer: false })
         .pipe(conn.newer(config.deploy.prod.dir))
         .pipe(conn.dest(config.deploy.prod.dir));
 });
