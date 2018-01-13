@@ -134,7 +134,34 @@ class Application {
 
   initHistoryFull(){
 
-      var LOGO_TITLE = $('#logo-title'),
+    let $historyLastSlider = $('.history-last-slider');
+    let $titleSlider = $('.js-history-title-all');
+    let $title = $('.js-history-title');
+
+    $('.js-show-history').on('click', function (event) {
+      event.preventDefault();
+      let $this = $(this);
+      let $fullHistory = $($this.attr('href'))
+      $historyLastSlider.hide()
+      $titleSlider.hide()
+      $title.show();
+      $fullHistory
+        .removeClass('full-history_disable')
+        .addClass('full-history_active');
+    });
+
+    $('.js-history-back').on('click', function (event) {
+      event.preventDefault();
+      let $this = $(this);
+      $this
+        .parents('.full-history')
+        .addClass('full-history_disable')
+        .removeClass('full-history_active');
+      $titleSlider.show()
+      $title.hide()
+      $historyLastSlider.show()
+    });
+     /* var LOGO_TITLE = $('#logo-title'),
            FEED = $('#feed');
       //
       var btns = document.getElementsByClassName('whatch__full');
@@ -156,9 +183,7 @@ class Application {
               console.log(LOGO_TITLE);
 
           }
-      }
-
-
+      }*/
   }
 
   initEvents () {

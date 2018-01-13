@@ -34,189 +34,199 @@
 		    <a href="#" class="simple__btn simple__btn_success">Отправить</a>
 	    </div>
 
-	    <div class="full-history full-history_disable">
-		    <h2 class="history__title">История</h2>
-		    <div class="full-history-content">
-			    <img class="history__logo logo-first" src="">
-			    <div class="history-feed">
-				    <h5 id="logo-title" class="logo-title"></h5>
-				    <p id="feed" class="feed"></p>
-				    <a href="#" class="whatch__full"><img src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всес историям</a>
-			    </div>
-		    </div>
-	    </div>
-
+    {% set histories = [
+        {
+            id: "history-1",
+            title: "Алиса Краснодарова",
+            image: "/assets/images/alisa.png",
+            text: 'Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span>'
+        },{
+            id: "history-2",
+            title: "Кристина Кац",
+            image: "/assets/images/kristina.png",
+            text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+        },{
+            id: "history-3",
+            title: "Ева Алимова",
+            image: "/assets/images/eva.png",
+            text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+        },{
+            id: "history-4",
+            title: "Анна Кирилова",
+            image: "/assets/images/anna.png",
+            text: 'Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span>'
+        },{
+            id: "history-5",
+            title: "Олег Бондаренко",
+            image: "/assets/images/oleg.png",
+            text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+        },{
+            id: "history-6",
+            title: "Наташа Кирова",
+            image: "/assets/images/natasha.png",
+            text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+        }
+    ] %}
+        {% set historiesSlides = [
+			{
+				left: [
+					{
+						id: "history-1",
+						title: "Алиса Краснодарова",
+						image: "/assets/images/alisa.png",
+						text: 'Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span>'
+					},{
+						id: "history-2",
+						title: "Кристина Кац",
+						image: "/assets/images/kristina.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					},{
+						id: "history-3",
+						title: "Ева Алимова",
+						image: "/assets/images/eva.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					}
+				],
+				right: [
+					{
+						id: "history-4",
+						title: "Анна Кирилова",
+						image: "/assets/images/anna.png",
+						text: 'Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span>'
+					},{
+						id: "history-5",
+						title: "Олег Бондаренко",
+						image: "/assets/images/oleg.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					},{
+						id: "history-6",
+						title: "Наташа Кирова",
+						image: "/assets/images/natasha.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					}
+				]
+			},{
+				left: [
+					{
+						id: "history-1",
+						title: "Алиса Краснодарова",
+						image: "/assets/images/alisa.png",
+						text: 'Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span>'
+					},{
+						id: "history-2",
+						title: "Кристина Кац",
+						image: "/assets/images/kristina.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					},{
+						id: "history-3",
+						title: "Ева Алимова",
+						image: "/assets/images/eva.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					}
+				],
+				right: [
+					{
+						id: "history-4",
+						title: "Анна Кирилова",
+						image: "/assets/images/anna.png",
+						text: 'Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span>'
+					},{
+						id: "history-5",
+						title: "Олег Бондаренко",
+						image: "/assets/images/oleg.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					},{
+						id: "history-6",
+						title: "Наташа Кирова",
+						image: "/assets/images/natasha.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					}
+				]
+			},{
+				left: [
+					{
+						id: "history-1",
+						title: "Алиса Краснодарова",
+						image: "/assets/images/alisa.png",
+						text: 'Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span>'
+					},{
+						id: "history-2",
+						title: "Кристина Кац",
+						image: "/assets/images/kristina.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					},{
+						id: "history-3",
+						title: "Ева Алимова",
+						image: "/assets/images/eva.png",
+						text: 'Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span>'
+					}
+				],
+				right: [
+					{
+						id: "history-4",
+						title: "Анна Кирилова",
+						image: "/assets/images/anna.png",
+						text: 'Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span>'
+					},{
+						id: "history-5",
+						title: "Олег Бондаренко",
+						image: "/assets/images/oleg.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					},{
+						id: "history-6",
+						title: "Наташа Кирова",
+						image: "/assets/images/natasha.png",
+						text: 'Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span>'
+					}
+				]
+			}
+        ] %}
         <div class="history-last">
-            <h2 data-aos="fade-right" class="history-last__titile" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">Последние истории</h2>
-	        <div class="history-last-slider slider ">
-		        <div class="history-slider slick-slide ">
-			        <div class="history-people">
-				        <div class="history-left">
-					        <div class="history-one">
-						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Алиса Краснодарова</h5>
-							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Кристина Кац</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Ева Алимова</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-				        <div class="history-right">
-					        <div class="history-one">
-						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Анна Кирилова</h5>
-							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Олег Бондаренко</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Наташа Кирова</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="#" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-			        </div>
-		        </div>
-		        <div class="history-slider slick-slide ">
-			        <div class="history-people">
-				        <div class="history-left">
-					        <div class="history-one">
-						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Алиса Краснодаорова</h5>
-							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Кристина Кац</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Ева Алимова</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-				        <div class="history-right">
-					        <div class="history-one">
-						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Анна Кирилова</h5>
-							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Олег Бондаренко</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Наташа Кирова</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-			        </div>
-		        </div>
-		        <div class="history-slider slick-slide ">
-			        <div class="history-people">
-				        <div class="history-left">
-					        <div class="history-one">
-						        <img class="history__logo logo-first" src="/assets/images/alisa.png" alt="девушка Алиса">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Алиса Краснодаорова</h5>
-							        <p class="feed">Маленькая, жареная, хрустящая<br> лепешка из маиса или пшеницы.<br>В такие лепешки заворачивают<br><span class="full__fid">разную начинку: бобы,<br> гуакамоле... (пюре из авокадо и<br> томатов со специями</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-second" src="/assets/images/kristina.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Кристина Кац</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-third" src="/assets/images/eva.png" alt="">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Ева Алимова</h5>
-							        <p class="feed">Если обычный кебаб состоит из<br> мяса и картофеля фри, то<br> марокканское блюдо нечто иное.<br><span class="full__fid"> Шиш кебаб традиционно готовят...<br> из мяса ягненка, но также<br> используют говядину, курятин</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-				        <div class="history-right">
-					        <div class="history-one">
-						        <img class="history__logo logo-four" src="/assets/images/anna.png" alt="Анна">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Анна Кирилова</h5>
-							        <p class="feed">Это блюдо из мяса и овощей на<br> гриле, которое готовят прямо на<br> глазах. Его могут ещё подавать в<br><span class="full__fid">пите круглой или овальной форм...<br> Это самое вкусное сочетание,<br> особенно, для проголодавшегося<br> туриста, путешествующего по Греции</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-five" src="/assets/images/oleg.png" alt="Олег">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Олег Бондаренко</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-					        <div class="history-one">
-						        <img class="history__logo logo-six" src="/assets/images/natasha.png" alt="Наташа">
-						        <div class="history-feed">
-							        <h5 class="logo-title">Наташа Кирова</h5>
-							        <p class="feed">Поговорим о бел пури, вкусном<br> индийском блюде из воздушного риса,<br> жареной вермишели, овощей и соусом <span class="full__fid">из острого тамаринда... Лучше всего <br>попробовать блюдо в Мумбаи.</span></p>
-							        <a href="#" class="whatch__full">Читать полностью</a>
-						        </div>
-					        </div>
-				        </div>
-			        </div>
-		        </div>
+            <h2 data-aos="fade-right" class="history-last__titile js-history-title-all" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">Последние истории</h2>
+            <h2 class="history-last__titile js-history-title" style="display: none">История</h2>
+            {% for history in histories %}
+				<div id="{{ history.id }}" class="full-history full-history_disable">
+					<div class="full-history-content">
+						<img class="history__logo logo-first" src="">
+						<div class="history-feed">
+							<h5 id="logo-title" class="logo-title">{{ history.title }}</h5>
+							<p id="feed" class="feed">{{ history.text|safe }}</p>
+							<a href="#" class="whatch__full js-history-back"><img src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всес историям</a>
+						</div>
+					</div>
+				</div>
+            {% endfor %}
+	        <div class="history-last-slider slider">
+    			{% for historySlide in historiesSlides %}
+					<div class="history-slider slick-slide ">
+						<div class="history-people">
+							<div class="history-left">
+                                {% for history in historySlide.left %}
+									<div class="history-one">
+										<img class="history__logo logo-four" src="{{ history.image }}" alt="{{ history.title }}">
+										<div class="history-feed">
+											<h5 class="logo-title">{{ history.title }}</h5>
+											<p class="feed">{{ history.text|safe }}</p>
+											<a href="#{{ history.id }}" class="whatch__full js-show-history">Читать полностью</a>
+										</div>
+									</div>
+                                {% endfor %}
+							</div>
+							<div class="history-right">
+                    			{% for history in historySlide.right %}
+									<div class="history-one">
+										<img class="history__logo logo-four" src="{{ history.image }}" alt="{{ history.title }}">
+										<div class="history-feed">
+											<h5 class="logo-title">{{ history.title }}</h5>
+											<p class="feed">{{ history.text|safe }}</p>
+											<a href="#{{ history.id }}" class="whatch__full js-show-history">Читать полностью</a>
+										</div>
+									</div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+                {% endfor %}
             </div>
         </div>
     </div>
