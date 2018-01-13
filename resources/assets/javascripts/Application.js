@@ -14,6 +14,7 @@ class Application {
     console.log('application start');
 
 
+    this.initHistoryFull();
     this.initHistory();
     this.initTextCount();
     this.initAnimate();
@@ -34,7 +35,7 @@ class Application {
   initHistory(){
 
     $('.history__send').on('click', function (e) {
-      event.preventDefault();
+      event.preventDefault(e);
 
       if ($('.add-history').hasClass('add-history_disable')){
 
@@ -46,16 +47,16 @@ class Application {
     });
 
 
-  $('.simple__btn_success').on('click', function (e) {
+    $('.simple__btn_success').on('click', function (e) {
 
-    event.preventDefault();
+      event.preventDefault(e);
 
-    $('.add-history').removeClass('add-history_active');
-    $('.add-history').addClass('add-history_disable');
-    $('.history-last').removeClass('history-last_disable');
+      $('.add-history').removeClass('add-history_active');
+      $('.add-history').addClass('add-history_disable');
+      $('.history-last').removeClass('history-last_disable');
 
-    console.log('WARNING, no send your histtory');
-  })
+      console.log('WARNING, no send your histtory');
+    })
 
   }
 
@@ -130,9 +131,39 @@ class Application {
     });
   }
 
+
+  initHistoryFull(){
+
+      var LOGO_TITLE = $('#logo-title'),
+           FEED = $('#feed');
+      //
+      var btns = document.getElementsByClassName('whatch__full');
+      var logo_title = document.getElementsByClassName('logo-title');
+      var feed = document.getElementsByClassName('feed');
+
+
+      for (var i = 0; i < btns.length; i++) {
+          btns[i].setAttribute('current', i);
+          btns[i].onclick = function () {
+          event.preventDefault();
+              $('.history-last').addClass('history-last_disable');//del slider
+              $('.full-history').addClass('full-history_active');//show full history
+
+                LOGO_TITLE.text(logo_title[i].textContent);
+                FEED.text(feed[i].textContent);
+
+
+              console.log(LOGO_TITLE);
+
+          }
+      }
+
+
+  }
+
   initEvents () {
 
-    var btns = document.getElementsByClassName('whatch__full')
+    /*var btns = document.getElementsByClassName('whatch__full')
     var full = document.getElementsByClassName('full__fid')
 
     for (var i = 0; i < btns.length; i++) {
@@ -147,7 +178,7 @@ class Application {
           this.innerHTML = 'Скрыть'
         }
       }
-    }
+    }*/
 
 
     var currTime = getTime()
