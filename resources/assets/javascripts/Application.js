@@ -13,12 +13,52 @@ class Application {
   constructor () {
     console.log('application start');
 
+
+    this.initHistory();
+    this.initTextCount();
     this.initAnimate();
     this.initMobileMenu();
     this.initEventSlick();
     this.initEvents();
 
   }
+
+  initTextCount(){
+      $(".history__add__text").keyup(function(){
+        var count = $('.history__add__text').val();
+        $('.text-count').text(count.length +' / 1000');
+      });
+  }
+
+
+  initHistory(){
+
+    $('.history__send').on('click', function (e) {
+      event.preventDefault();
+
+      if ($('.add-history').hasClass('add-history_disable')){
+
+          $('.history-last').addClass('history-last_disable');
+          $('.add-history').removeClass('add-history_disable');
+          $('.add-history').addClass('add-history_active');
+
+      }
+    });
+
+
+  $('.simple__btn_success').on('click', function (e) {
+
+    event.preventDefault();
+
+    $('.add-history').removeClass('add-history_active');
+    $('.add-history').addClass('add-history_disable');
+    $('.history-last').removeClass('history-last_disable');
+
+    console.log('WARNING, no send your histtory');
+  })
+
+  }
+
 
   initAnimate(){
     AOS.init();
