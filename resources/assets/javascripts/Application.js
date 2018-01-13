@@ -135,7 +135,7 @@ class Application {
   initHistoryFull(){
 
       var LOGO_TITLE = $('#logo-title'),
-           FEED = $('#feed');
+          FEED = $('#feed');
       //
       var btns = document.getElementsByClassName('whatch__full');
       var logo_title = document.getElementsByClassName('logo-title');
@@ -147,13 +147,14 @@ class Application {
           btns[i].onclick = function () {
           event.preventDefault();
               $('.history-last').addClass('history-last_disable');//del slider
+              $('.full-history').removeClass('full-history_disable');
               $('.full-history').addClass('full-history_active');//show full history
 
                 LOGO_TITLE.text(logo_title[i].textContent);
                 FEED.text(feed[i].textContent);
 
 
-              console.log(LOGO_TITLE);
+              console.log(logo_title[i]);
 
           }
       }
