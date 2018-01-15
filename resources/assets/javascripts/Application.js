@@ -33,9 +33,9 @@ class Application {
 
 
   initHistory(){
-
-    $('.history__send').on('click', function (e) {
-      event.preventDefault(e);
+    $('.history__disable').css('display', 'none');
+    $('.history__send').on('click', function (event) {
+      event.preventDefault();
 
       if ($('.add-history').hasClass('add-history_disable')){
 
@@ -43,17 +43,25 @@ class Application {
           $('.add-history').removeClass('add-history_disable');
           $('.add-history').addClass('add-history_active');
 
+          $('.history__send').css('display', 'none');
+          $('.history__chois').css('display', 'none');
+
+          $('.history__disable').css('display', 'block');
+
+
       }
     });
 
 
-    $('.simple__btn_success').on('click', function (e) {
-
-      event.preventDefault(e);
+    $('.simple__btn_success').on('click', function (event) {
+      event.preventDefault();
 
       $('.add-history').removeClass('add-history_active');
       $('.add-history').addClass('add-history_disable');
       $('.history-last').removeClass('history-last_disable');
+
+        $('.history__send').removeClass('history__send_disable');
+        $('.history__chois').removeClass('history__chois_disable');
 
       console.log('WARNING, no send your histtory');
     })
@@ -161,29 +169,7 @@ class Application {
       $title.hide()
       $historyLastSlider.show()
     });
-     /* var LOGO_TITLE = $('#logo-title'),
-           FEED = $('#feed');
-      //
-      var btns = document.getElementsByClassName('whatch__full');
-      var logo_title = document.getElementsByClassName('logo-title');
-      var feed = document.getElementsByClassName('feed');
 
-
-      for (var i = 0; i < btns.length; i++) {
-          btns[i].setAttribute('current', i);
-          btns[i].onclick = function () {
-          event.preventDefault();
-              $('.history-last').addClass('history-last_disable');//del slider
-              $('.full-history').addClass('full-history_active');//show full history
-
-                LOGO_TITLE.text(logo_title[i].textContent);
-                FEED.text(feed[i].textContent);
-
-
-              console.log(LOGO_TITLE);
-
-          }
-      }*/
   }
 
   initEvents () {

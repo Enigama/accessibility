@@ -7,7 +7,7 @@ a
 
 .menu-content
   display: flex
-  justify-content: space-around
+  justify-content: center
   min-height: 150px
   line-height: 150px
 
@@ -16,6 +16,9 @@ a
     font-family: gothamPB
     font-size: 18px
     color: #444
+    margin-left: 35px
+    margin-right: 35px
+
 
     +media-768
       font-size: 14px
@@ -35,14 +38,16 @@ a
       border-radius: 50px
 
   &__link
+    transition: .4s
     &:hover
       color: #9ecb32
+      transition: .4s
 
 
 .logo
   padding-top: 10px
-  width: 120px
-  height: 125px
+  //width: 120px
+  height: 126px
 
   +media-768
     width: 100px

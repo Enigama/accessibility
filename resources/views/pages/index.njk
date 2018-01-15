@@ -15,8 +15,8 @@
 	            <h2 class="history__title history__title__authorization history__text_white">Авторизируйся</h2>
                 <p class="history__text history__text_white">чтобы получить возможность<br> выиграть блюдо из твоих<br>воспоминаний</p>
                 <a class="simple__btn history__send history__send_white" href="#">Написать историю</a>
-	            <a href="#" class="simple__btn simple__btn_vk simple__btn_disable"><img src="/assets/images/vk-white.png" class="history__social vk">Вконтакте</a>
-	            <a href="#" class="simple__btn simple__btn_faceboock simple__btn_disable"><img src="/assets/images/faceboock-white.png" class="history__social faceboock">Faceboock</a>
+	            <a href="#" class="simple__btn simple__btn_vk history__disable"><img src="/assets/images/vk-white.png" class="history__social vk">Вконтакте</a>
+	            <a href="#" class="simple__btn simple__btn_faceboock history__disable"><img src="/assets/images/faceboock-white.png" class="history__social faceboock">Faceboock</a>
                 <p class="history__text history__text_white history__text_top">Как мы будем определять<br> победителся конкурса?</p>
                 <a class="simple__btn history__chois history__text_white" href="#">Протокол выбора</a>
             </div>
@@ -28,8 +28,9 @@
 	    <div class="add-history add-history_disable">
 		    <h2 class="history__title history__title__add">Ваша история</h2>
 		    <p class="history__text__add">Расскажи о лучшем блюде в вашей<br>жизни и отправьие историю нам</p>
-		    <textarea name="text" class="history__add__text" cols="80" rows="17" maxlength="1000"
+		    <textarea name="text" class="history__add__text" maxlength="1000"
 		    ></textarea>
+		    {#cols="80" rows="17"#}
 		    <span class="text-count"></span>
 		    <a href="#" class="simple__btn simple__btn_success">Отправить</a>
 	    </div>
@@ -187,7 +188,7 @@
             {% for history in histories %}
 				<div id="{{ history.id }}" class="full-history full-history_disable">
 					<div class="full-history-content">
-						<img class="history__logo logo-first" src="">
+						<img class="history__logo logo-first" src="{{ history.image }}">
 						<div class="history-feed">
 							<h5 id="logo-title" class="logo-title">{{ history.title }}</h5>
 							<p id="feed" class="feed">{{ history.text|safe }}</p>

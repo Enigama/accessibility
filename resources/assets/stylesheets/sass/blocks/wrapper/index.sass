@@ -215,6 +215,16 @@ a:hover, a:focus
   &_white
     background: #fff
 
+  &_disable
+    display: none
+
+.history__chois
+  &_disable
+    display: none
+
+//.history__disable
+  display: none
+
 .history__text_top
   padding-top: 25px
   //padding-bottom: 25px
@@ -227,10 +237,12 @@ a:hover, a:focus
   bottom: -145px
 
   +media-1152
-    left: 5%
+    left: 40%
+
 
   +media-992
     left: 20%
+    bottom: 37%
 
   +media-900
     left: 16%
@@ -240,7 +252,10 @@ a:hover, a:focus
 
   +media-720
     width: 75px
-    top: 5%
+    bottom: 40%
+
+  +media-685
+    bottom: 50%
 
   +media-576
     display: none
@@ -258,6 +273,9 @@ a:hover, a:focus
 
   +media-800
     right: 16%
+
+  +media-720
+    width: 60px
 
   +media-685
     right: 10%
