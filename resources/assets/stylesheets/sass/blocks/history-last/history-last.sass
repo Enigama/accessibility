@@ -37,7 +37,7 @@
 
 .history-people
   position: relative
-  padding-top: 55px
+  padding-top: 35px
 
   +media-992
     padding-top: 55px
@@ -59,6 +59,9 @@
     justify-content: center
 
 .history-left > .history-one
+
+  &:last-child
+    margin-bottom: 30px
 
   +media-1211
     width: 370px
@@ -85,6 +88,10 @@
     width: 310px
 
 .history-right > .history-one
+
+  &:last-child
+    margin-bottom: 30px
+
   +media-685
     width: 34vw
 
@@ -97,7 +104,7 @@
 .history-one
   width: 385px
   min-height: 125px
-  margin-bottom: 65px
+  margin-bottom: 50px
 
   +media-1152
     width: 340px
@@ -131,13 +138,14 @@
   font-family: gothamPBo
   font-size: 16px
   color: #444
-  padding-bottom: 10px
+  //padding-bottom: 10px
   margin-top: 0
 
 .feed
   font-family: gothamPL
   font-size: 15px
   line-height: 22px
+  margin-bottom: 0
 
   +media-1152
     font-size: 13px
@@ -163,7 +171,7 @@
   font-size: 15px
   color: #9ecb33
   margin-top: 10px
-  margin-bottom: 15px
+  //margin-bottom: 15px
 
   &:hover
     text-decoration: none

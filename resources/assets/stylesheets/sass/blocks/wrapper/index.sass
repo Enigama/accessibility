@@ -72,6 +72,7 @@ a:hover, a:focus
   position: absolute
   left: -4%
   bottom: 39%
+  height: 72px
 
   +media-1024
     left: -2%
@@ -95,7 +96,7 @@ a:hover, a:focus
 .history-content
   border: 5px dotted #d6d6d6
   border-radius: 10px
-  padding: 40px 40px 65px
+  padding: 40px 40px 45px
 
   +media-1225
     padding-left: 20px
@@ -170,6 +171,8 @@ a:hover, a:focus
     font-size: 9vw
     padding-top: 5px
 
+  &__user
+    display: block
 
   &__authorization
     display: none
@@ -185,7 +188,8 @@ a:hover, a:focus
   font-family: gothamPM
   font-size: 16px
   padding-top: 15px
-  //padding-bottom: 25px
+  padding-bottom: 25px
+  margin-bottom: 0px
 
   +media-1225
     font-size: 15px
@@ -210,6 +214,9 @@ a:hover, a:focus
 
   +media-320
     font-size: 12px
+
+  &__top
+    padding-top: 15px
 
 .history__send
   color: #a4ce3e
@@ -236,7 +243,7 @@ a:hover, a:focus
 .bacon
   position: absolute
   left: 43%
-  bottom: -105px
+  bottom: -100px
 
   +media-1152
     left: 40%

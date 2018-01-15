@@ -44,7 +44,9 @@ class Application {
           $('.add-history').addClass('add-history_active');
 
           $('.history__send').css('display', 'none');
-          $('.history__chois').css('display', 'none');
+          $('.history__title__user').css('display', 'none');
+          $('.history__title__authorization').css('display', 'block');
+          //$('.history__chois').css('display', 'none');
 
           $('.history__disable').css('display', 'block');
 

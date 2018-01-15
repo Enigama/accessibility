@@ -1,5 +1,6 @@
 .victory
   background: url("../../images/bg-main.png") no-repeat
+  background-position-y: 30px
   position: relative
   min-height: 700px
   padding-left: 0
@@ -41,7 +42,7 @@
   width: 100%
 
 .victory-concurs
-  width: 630px
+  width: 675px
   text-align: center
   padding-top: 125px
   padding-left: 111px
@@ -63,8 +64,8 @@
   position: absolute
 
   &__main__one
-    top: 17%
-    right: 31%
+    top: 18%
+    right: 32%
 
     +media-1024
       right: 20%
@@ -79,8 +80,8 @@
       right: 0%
 
   &__main__second
-    left: 15%
-    top: 41%
+    left: 14%
+    top: 47%
 
     +media-1600
       left: 12%
@@ -103,7 +104,7 @@
 
   &__main__third
     right: 35%
-    top: 62%
+    top: 69%
 
     +media-1600
       right: 34%
@@ -124,6 +125,8 @@
   font-family: drina
   font-size: 55px
   color: #444
+  padding-left: 75px
+  letter-spacing: 2px
 
   //&-animate
     +animate-eff
@@ -155,7 +158,7 @@
 
 .victory__last__day
   display: block
-  padding-bottom: 15px
+  //padding-bottom: 15px
 
 .victory__last__day, .social__news
   font-family: gothamPBo
@@ -189,8 +192,10 @@
   font-size: 28px
   font-weight: normal
 
-  width: 500px
+  width: 535px
   color: #939393
+
+  margin-top: 10px
 
   +media-860
     width: 550px
