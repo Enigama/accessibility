@@ -15,10 +15,11 @@
 	            <h2 class="history__title history__title__authorization history__text_white">Авторизируйся</h2>
                 <p class="history__text history__text_white">чтобы получить возможность<br> выиграть блюдо из твоих<br>воспоминаний</p>
                 <a class="simple__btn history__send history__send_white" href="#">Написать историю</a>
-	            <a href="#" class="simple__btn simple__btn_vk history__disable"><img src="/assets/images/vk-white.png" class="history__social vk">Вконтакте</a>
-	            <a href="#" class="simple__btn simple__btn_faceboock history__disable"><img src="/assets/images/faceboock-white.png" class="history__social faceboock">Faceboock</a>
+	            <a href="#" class="simple__btn simple__social simple__btn_vk "><img src="/assets/images/vk-white.png" class="history__social vk">Вконтакте</a>
+	            <a href="#" class="simple__btn simple__social simple__btn_faceboock "><img src="/assets/images/faceboock-white.png" class="history__social faceboock">Faceboock</a>
                 <p class="history__text history__text_white history__text_top">Как мы будем определять<br> победителся конкурса?</p>
                 <a class="simple__btn history__chois history__text_white" href="#">Протокол выбора</a>
+	            <p class="history__text history__text_white history__confirmations">Авторизовавшись вы даете<br> свое соглашение на <a class="confirmations" href="#">обработку<br> персональных данных</a></p>
             </div>
         </div>
 	    <img class="bacon" src="/assets/images/bacon.png">
@@ -182,21 +183,19 @@
 				]
 			}
         ] %}
-	    <div class="full-history">
 
-	    </div>
-        <div class="history-last">
+        <div class="history-last js-history-last">
             <h2 data-aos="fade-right" class="history-last__titile js-history-title-all" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">Последние Истории</h2>
             <h2 class="history-last__titile js-history-title" style="display: none">История</h2>
             {% for history in histories %}
-				<div id="{{ history.id }}" class="full-history full-history_disable">
+				<div id="{{ history.id }}" class="full-history full-history_disable ">
 					<div class="full-history-content">
 						<img class="history__logo logo-first" src="{{ history.image }}">
-						<div class="history-feed">
-							<h5 id="logo-title" class="logo-title">{{ history.title }}</h5>
-							<p id="feed" class="feed">{{ history.text|safe }}</p>
-							<a href="#" class="whatch__full js-history-back"><img src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всес историям</a>
-						</div>
+						<h5 id="logo-title" class="logo-title full__title">{{ history.title }}</h5>
+						<a href="#" class="whatch__full js-history-back"><img class="arrow__back" src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всем историям</a>
+					</div>
+					<div class="history-feed full-feed">
+						<p id="feed" class="feed">{{ history.text|safe }}</p>
 					</div>
 				</div>
             {% endfor %}
@@ -260,7 +259,6 @@
 		            <span class="to_h top_h"><span></span><span class="shadow_h"></span></span>
 		            <span class="to_h bottom_h"><span></span><span class="shadow_h"></span></span>
 	            </div>
-
 	            <div class="counter minutes">
 		            <span class="decor top_m"></span>
 		            <span class="decor bottom_m"></span>
@@ -269,7 +267,6 @@
 		            <span class="to_m top_m"><span></span><span class="shadow_m"></span></span>
 		            <span class="to_m bottom_m"><span></span><span class="shadow_m"></span></span>
 	            </div>
-
 	            <div class="counter seconds">
 		            <span class="decor top"></span>
 		            <span class="decor bottom"></span>
@@ -279,6 +276,12 @@
 		            <span class="to bottom"><span></span><span class="shadow"></span></span>
 	            </div>
             </h1>
+	        <div class="info-count">
+		        <span class="info-count__item">Дней</span>
+		        <span class="info-count__item">Часов</span>
+		        <span class="info-count__item">Минут</span>
+	        </div>
+
             {##}
             <div class="social">
                 <span class="social__news">Следите за новостями:</span>

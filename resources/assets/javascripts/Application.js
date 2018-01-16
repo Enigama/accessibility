@@ -3,6 +3,8 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 import AOS from 'aos'
 
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
 
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick-theme.scss';
@@ -14,6 +16,7 @@ class Application {
     console.log('application start');
 
 
+    this.initScrollY();
     this.initHistoryFull();
     this.initHistory();
     this.initTextCount();
@@ -22,6 +25,14 @@ class Application {
     this.initEventSlick();
     this.initEvents();
 
+  }
+
+  initScrollY(){
+    $('.full-history').mCustomScrollbar({
+        axis:"y",
+        theme: "dark"
+
+    });
   }
 
   initTextCount(){
@@ -33,23 +44,28 @@ class Application {
 
 
   initHistory(){
-    $('.history__disable').css('display', 'none');
-    $('.history__send').on('click', function (event) {
-      event.preventDefault();
+    $('.history__send').css('display', 'none');
+    $('.history__chois').css('display', 'none');
+    $('.history__text_top').css('display', 'none');
 
+
+    $('.simple__social').on('click', function (event) {
+      event.preventDefault();
       if ($('.add-history').hasClass('add-history_disable')){
 
           $('.history-last').addClass('history-last_disable');
           $('.add-history').removeClass('add-history_disable');
           $('.add-history').addClass('add-history_active');
 
-          $('.history__send').css('display', 'none');
-          $('.history__title__user').css('display', 'none');
-          $('.history__title__authorization').css('display', 'block');
-          //$('.history__chois').css('display', 'none');
+          $('.history__text_top').css('display', 'block');
 
-          $('.history__disable').css('display', 'block');
+          $('.simple__social').css('display','none');
+          $('.history__send').css('display', 'block');
+          $('.history__title__user').css('display', 'block');
+          $('.history__title__authorization').css('display', 'none');
+          $('.history__chois').css('display', 'block');
 
+          $('.history__confirmations').css('display', 'none');
 
       }
     });
@@ -119,7 +135,8 @@ class Application {
 
       customPaging: function (slider, i) {
         var curslide = i + 1;
-        return '<a class="history__pagin">' + curslide + '</a>'
+          console.log(curslide.valueOf());
+          return '<a class="history__pagin">' + curslide + '</a>';
       },
 
       responsive: [{
@@ -130,6 +147,7 @@ class Application {
           }
 
       }],
+
 
     });
 
@@ -147,17 +165,19 @@ class Application {
     let $historyLastSlider = $('.history-last-slider');
     let $titleSlider = $('.js-history-title-all');
     let $title = $('.js-history-title');
+    let $historylast = $('.js-history-last');
 
     $('.js-show-history').on('click', function (event) {
       event.preventDefault();
       let $this = $(this);
       let $fullHistory = $($this.attr('href'))
-      $historyLastSlider.hide()
-      $titleSlider.hide()
-      $title.show();
+      $historyLastSlider.css('display','none')
+      $titleSlider.css('display','none')
+      $title.css('display','block');
       $fullHistory
         .removeClass('full-history_disable')
         .addClass('full-history_active');
+      $historylast.css('width','700');
     });
 
     $('.js-history-back').on('click', function (event) {
@@ -167,9 +187,10 @@ class Application {
         .parents('.full-history')
         .addClass('full-history_disable')
         .removeClass('full-history_active');
-      $titleSlider.show()
-      $title.hide()
-      $historyLastSlider.show()
+      $titleSlider.css('display','block')
+      $title.css('display','none')
+      $historyLastSlider.css('display','block')
+      $historylast.css('width','auto');
     });
 
   }
