@@ -18,15 +18,28 @@
     padding-right: 35px
     margin-top: 0px
 
+    +media-1105
+      font-size: 50px
+      padding-right: 0
+
 .history-last > .slick-slider
   width: 760px
   //798
 
+  +media-1200
+    width: 734px
+
+  +media-1155
+    width: 715px
+
   +media-1152
     width: 700px
 
-  +media-1000
-    width: 68vw
+  +media-1070
+    width: 65vw
+
+  //+media-998
+    width: 63vw
 
   +media-992
     width: 100%
@@ -35,11 +48,17 @@
 .slick-track > .slick-slide
   width: 770px
 
+
+
 .history-people
   position: relative
   padding-top: 35px
+  
+  +media-1105
+    float: right
 
   +media-992
+    float: none
     padding-top: 55px
     display: flex
     justify-content: space-around
@@ -51,6 +70,18 @@
 .history-left
   float: left
   width: 375px
+
+  +media-1200
+    width: 350px
+
+  +media-1152
+    width: 340px
+
+  +media-1105
+    width: 315px
+
+  +media-1024
+    width: 31vw
 
   +media-576
     float: none
@@ -68,6 +99,9 @@
 
   +media-1152
     width: 340px
+
+  +media-1070
+    width: 305px
 
   +media-1000
     width: 32vw
@@ -92,6 +126,15 @@
   &:last-child
     margin-bottom: 30px
 
+  +media-1155
+    width: 365px
+
+  +media-1152
+    width: 340px
+
+  +media-998
+    width: 335px
+
   +media-685
     width: 34vw
 
@@ -102,12 +145,15 @@
     width: 310px
 
 .history-one
-  width: 385px
+  width: 380px
   min-height: 125px
   margin-bottom: 50px
 
   +media-1152
     width: 340px
+
+  +media-1105
+    margin-bottom: 30px
 
   +media-576
     text-align: center
@@ -141,11 +187,18 @@
   //padding-bottom: 10px
   margin-top: 0
 
+  +media-1155
+    font-size: 15px
+
+
 .feed
   font-family: gothamPL
   font-size: 15px
   line-height: 22px
   margin-bottom: 0
+
+  +media-1155
+    font-size: 14px
 
   +media-1152
     font-size: 13px
@@ -195,7 +248,7 @@
 .history-right
   float: left
 
-  +media-1225
+  //+media-1225
     margin-right: 20px
 
   +media-1152

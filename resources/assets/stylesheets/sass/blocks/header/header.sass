@@ -2,23 +2,39 @@
   min-height: 950px
   position: relative
   background: url('../../images/bg-header.png') no-repeat
-  background-size: cover
+  //background-size: cover
   background-position-x: -50px
 
-  +media-1500
-    background-position-x: -75px
+  +media-1735
+    background-position-x: -100px
+
+  +media-1610
+    background-position-x: -125px
+
+  +media-1440
+    background-position-x: -135px
 
   +media-1366
     background-position-x: -135px
 
   +media-1280
+    min-height: 900px
     background-position-x: -170px
+
+  +media-1240
+    background-position-x: -225px
 
   +media-1152
     background-position-x: -225px
 
+  +media-1100
+    background-position-x: -275px
+
+  +media-1050
+    background-position-x: -315px
+
   +media-1024
-    background-position-x: -300px
+    background-position-x: -325px
 
   +media-992
     background-position-x: -335px
@@ -26,11 +42,19 @@
   +media-955
     background-position-x: -325px
 
+  +media-915
+    background-position-x: -345px
+
+  +media-900
+    background-position-x: -380px
+
   +media-860
     background-position-x: -385px
 
   +media-768
-    background-position-x: -395px
+    background-position-x: -315px
+    background-size: cover
+    min-height: 770px
 
   +media-720
     background-position-x: -475px
@@ -44,6 +68,8 @@
   +media-576
     background-position-x: -1100px
 
+.remember
+  position: relative
 
 .page--header::after
   position: absolute
@@ -57,7 +83,7 @@
 .remember-text::before
   content: ''
   position: absolute
-  left: -15px
+  left: -10px
   width: 55px
   height: 90px
   margin-top: 15px
@@ -66,25 +92,33 @@
   +media-1280
     left: -20px
 
-  +media-860
+  +media-992
     display: none
 
   
 .remember-right
   float: right
-  margin-top: 100px
+  margin-top: 55px
   //padding-right: 65px
 
   +media-1280
-    padding-right: 100px
+    padding-right: 80px
 
   +media-1225
     padding-right: 60px
 
+  +media-992
+    margin-top: 85px
+    padding-right: 15px
+
   +media-955
     padding-right: 20px
 
+  +media-860
+    padding-right: 0
+
   +media-768
+    margin-top: 35px
     padding-right: 10px
 
   +media-685
@@ -98,6 +132,7 @@
     margin-top: 195px
   
 .remember__title
+  text-align: right
   font-family: drina
   font-size: 120px
   letter-spacing: 2px
@@ -105,8 +140,17 @@
   color: #444
   //+animate-eff
 
+  +media-1610
+    //font-size: 110px
+
   +media-1600
-    font-size: 95px
+    //font-size: 95px
+  +media-1400
+    font-size: 110px
+
+  +media-1366
+    text-align: left
+    font-size: 100px
 
   +media-1280
     font-size: 75px
@@ -114,19 +158,29 @@
   +media-1152
     font-size: 65px
 
+  //+media-1024
+    text-align: right
+
+  //+media-992
+    text-align: left
+
   +media-955
     font-size: 55px
 
   +media-860
     font-size: 70px
-    margin-right: 50px
+    margin-right: 15px
     display: block
+
+  +media-810
+    font-size: 60px
 
   +media-800
     margin-right: 0px
 
   +media-768
-    font-size: 65px
+    font-size: 70px
+    letter-spacing: 0px
 
   +media-685
     text-align: center
@@ -140,6 +194,13 @@
 .remember-text
   position: relative
   margin-top: -25px
+  padding-left: 30px
+
+  +media-1280
+    margin-top: -15px
+
+  +media-992
+    padding-left: 0px
 
   +media-685
     width: 340px
@@ -155,14 +216,16 @@
   font-family: drina
   font-size: 48px
   color: #9ecb32
-  margin-left: 33px
+  //padding-left: 100px
+  //margin-left: 33px
 
   +media-1600
     font-size: 42px
 
   +media-1280
-    margin-left: 22px
-    font-size: 32px
+    //margin-left: 22px
+    margin-top: 5px
+    font-size: 34px
 
   +media-1152
     font-size: 30px
@@ -171,6 +234,9 @@
 
   +media-860
     margin-left: 0px
+
+  +media-768
+    font-size: 36px
 
   +media-685
     font-size: 34px
@@ -187,23 +253,31 @@
 .remember__text
   font-family: gothamPM
   font-size: 18px
-  margin-left: 65px
+  padding-left: 15px
+  //margin-left: 65px
   color: #6c6c6c
   line-height: 27px
 
   +media-1280
     font-size: 16px
-    margin-left: 36px
+    //margin-left: 36px
 
   +media-1152
     font-size: 14px
+
+  +media-992
+    padding-left: 0
 
   +media-860
     margin-right: 100px
     margin-left: 0px
 
+  +media-810
+    margin-right: 75px
+
   +media-768
     margin-right: 0px
+    font-size: 16px
 
   +media-576
     font-size: 17px
@@ -231,7 +305,8 @@
   &_bold
     font-family: gothamPBo
     color: #444
-    margin-left: 0
+    padding-left: 0
+    //margin-left: 0
 
   &_hide
     +media-860
@@ -241,13 +316,31 @@
   display: flex
   flex-direction: row
   justify-content: center
-  padding-top: 50px
-  padding-right: 13px
+  position: absolute
+  right: -25px
+  padding-top: 25px
+  //padding-right: 13px
+
+  +media-1366
+    right: 30px
+
+  +media-1280
+    right: 55px
+
+  +media-900
+    padding-top: 55px
 
   +media-860
     position: absolute
-    right: 10%
+    right: 6%
     justify-content: space-between
+
+  +media-810
+    right: 1%
+
+  +media-768
+    padding-top: 25px
+    right: 1%
 
   +media-685
     position: relative
@@ -263,6 +356,14 @@
   margin-right: 45px
   margin-left: 45px
   text-align: center
+
+  +media-1400
+    margin-right: 35px
+    margin-left: 35px
+
+  +media-1366
+    margin-left: 30px
+    margin-right: 30px
 
   +media-860
     margin-left: 10px
@@ -309,7 +410,10 @@
     margin-top: 18px
     font-size: 22px
 
-  +media-900
+  +media-1280
+    font-size: 18px
+
+  //+media-900
     font-size: 2vw
 
   +media-768
@@ -332,9 +436,9 @@
   margin-top: 10px
 
   +media-1280
-    font-size: 18px
+    font-size: 17px
 
-  +media-900
+  //+media-900
     font-size: 2vw
 
   +media-685
@@ -352,6 +456,9 @@
 .step-one
   margin-left: 30px
   margin-right: 30px
+
+  +media-992
+    margin-right: 15px
 
 .step-third
   //margin-left: 40px
@@ -376,44 +483,71 @@
 
 .arrow-long
   position: absolute
-  right: 12%
-  bottom: 23%
+  right: -15%
+  bottom: 40%
   width: 50vw
 
+  +media-1610
+    right: -8%
+    bottom: 40%
+
   +media-1600
-    right: 7%
-    bottom: 25%
+    width: 55vw
+    right: -11%
+    bottom: 35%
+
+  +media-1490
+    width: 53vw
+    right: -6%
+    bottom: 35%
 
   +media-1366
-    right: 3%
-
+    right: -5%
+    bottom: 45%
 
   +media-1280
-    right: 2%
-    bottom: 30%
+    right: -5%
+    bottom: 45%
+    width: 50vw
 
   +media-1152
-    width: 45vw
-    right: 2%
-    bottom: 33%
+    width: 50vw
+    right: -2%
+    bottom: 45%
+
+  +media-1050
+    width: 55vw
+    right: -3%
 
   +media-1024
     right: 2%
     bottom: 32%
     width: 52vw
 
+  +media-992
+    right: -5%
+    bottom: 45%
+    width: 58vw
+
   +media-955
-    right: 0%
-    bottom: 33%
-    width: 55vw
+    right: -3%
+    bottom: 35%
+    width: 60vw
+
+  +media-900
+    right: -5%
+    width: 65vw
 
   +media-860
-    right: -10%
+    right: 0%
     bottom: 40%
     width: 60vw
 
+  +media-810
+    width: 65vw
+
   +media-768
-    width: 66vw
+    width: 70vw
 
   +media-685
     width: 100vw
@@ -428,6 +562,10 @@
   position: absolute
   width: 95px
   height: 95px
+
+  +media-1490
+    width: 75px
+    height: 75px
 
   +media-860
     position: absolute
@@ -448,8 +586,26 @@
     left: 5%
     top: 61%
 
+    +media-1600
+      left: 1%
+
+    +media-1280
+      top: 68%
+
+    +media-1100
+      left: 0
+      top: 73%
+
+    +media-992
+      left: 7%
+      top: 20%
+
+    +media-900
+      left: 5%
+      top: 20%
+
     +media-768
-      left: 10%
+      left: 2%
       top: 20%
 
     +media-640
@@ -463,18 +619,59 @@
     left: 10%
     top: 80%
 
-    +media-768
+    +media-1735
+      left: 6%
+
+    +media-1280
+      top: 83%
+
+    +media-1100
       top: 85%
+      left: 0
+
+    +media-992
+      top: 89%
+      left: 18%
+
+    +media-768
+      top: 88%
+      left: 13%
 
     +media-576
       top: 80%
 
   &__third
-    top: 25%
-    right: 13%
+    top: 21%
+    right: 10%
+
+    +media-1735
+      right: 7%
+
+    +media-1610
+      right: 3%
+
+    +media-1490
+      right: 1%
+      top: 23%
+      width: 75px
+      height: 75px
+
+    +media-1400
+      width: 60px
+      height: 60px
+
+    +media-1366
+      right: 0%
+
+    +media-1280
+      right: 7%
 
     +media-1152
       right: 5%
+
+    +media-1024
+      right: 11%
+      top: 17%
 
     +media-860
       top: 23%
@@ -489,18 +686,26 @@
       top: 45%
 
   &__four
-    top: 85%
+    top: 80%
     right: 7%
-    background: url("../../images/sheets-four.png")
+    //background: url("../../images/sheets-four.png")
+
+    +media-1735
+      right: 2%
 
     +media-1600
-      top: 86%
+      top: 76%
 
     +media-1500
       right: 0
 
     +media-1152
       right: 0
+
+    +media-992
+      right: 15%
+      top: 95%
+      z-index: 1
 
     +media-768
       top: 92%

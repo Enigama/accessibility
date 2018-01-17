@@ -20,16 +20,17 @@ a:hover, a:focus
   padding: 45px 30px 100px
 
   +media-1225
+    width: 35vw
+
+  +media-1105
+    background-size: contain
     width: 33vw
 
-  +media-1211
-    width: 30vw
-
   +media-1050
-    width: 31vw
+    width: 33vw
 
   +media-1024
-    width: 30vw
+    width: 31vw
 
   +media-992
     margin: 0 auto
@@ -75,9 +76,9 @@ a:hover, a:focus
   height: 72px
 
   +media-1024
-    left: -2%
-    bottom: 27%
-    width: 65px
+    bottom: 40%
+    width: 55px
+    height: 55px
 
   +media-992
     bottom: 35%
@@ -99,12 +100,20 @@ a:hover, a:focus
   padding: 40px 40px 45px
 
   +media-1225
+    padding-top: 60px
     padding-left: 20px
     padding-right: 20px
+
+  +media-1105
+    padding-top: 25px
+    padding-bottom: 25px
 
   +media-1050
     padding-top: 25px
     padding-bottom: 35px
+
+  +media-1024
+    padding-bottom: 10px
 
   +media-992
     padding-left: 40px
@@ -177,6 +186,15 @@ a:hover, a:focus
   &__authorization
     display: block
 
+    +media-1225
+      font-size: 50px
+
+    +media-1200
+      font-size: 45px
+
+    +media-1105
+      font-size: 40px
+
 .history__social
   padding-right: 15px
 
@@ -193,6 +211,9 @@ a:hover, a:focus
 
   +media-1225
     font-size: 15px
+
+  +media-1070
+    font-size: 14px
 
   +media-1050
     font-size: 13px
@@ -229,6 +250,9 @@ a:hover, a:focus
 
 .history__confirmations
   padding-top: 35px
+
+  +media-1225
+    padding-top: 25px
 
 .confirmations
   border-bottom: 1.4px solid
