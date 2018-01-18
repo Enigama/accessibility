@@ -1,6 +1,7 @@
 .add-history
-  float: right
+  float: left
   position: relative
+  padding-left: 50px
 
 
   &_disable
@@ -9,15 +10,18 @@
   &_active
     display: block
 
-  +media-1280
-    width: 790px
+  +media-1225
+    float: right
+    padding-right: 75px
+    padding-left: 0
 
   +media-1152
-    width: 735px
+    padding-right: 50px
 
-  +media-1050
-    width: 700px
-    padding-bottom: 50px
+  +media-992
+    float: none
+    padding-left: 35px
+    padding-right: 35px
 
 .history__title__add
   text-align: center
@@ -44,8 +48,21 @@
   +media-1280
     width: 700px
 
+  +media-1225
+    width: 650px
+    height: 390px
+
+  +media-1200
+    width: 50vw
+
   +media-1152
-    width: 680px
+    width: 55vw
+
+  +media-1105
+    height: 335px
+
+  +media-992
+    width: 100%
 
 //&:focus
   //border-color: #ccc

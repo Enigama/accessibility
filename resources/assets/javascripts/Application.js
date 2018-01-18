@@ -177,7 +177,9 @@ class Application {
       $fullHistory
         .removeClass('full-history_disable')
         .addClass('full-history_active');
-      $historylast.css('width','700');
+      //$historylast.css('width','700');
+      $historylast.addClass('js-history-last_active');
+
     });
 
     $('.js-history-back').on('click', function (event) {
@@ -191,6 +193,8 @@ class Application {
       $title.css('display','none')
       $historyLastSlider.css('display','block')
       $historylast.css('width','auto');
+      $historylast.removeClass('js-history-last_active');
+
     });
 
   }

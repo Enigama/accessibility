@@ -67,13 +67,20 @@
     top: 18%
     right: 32%
 
+    +media-1105
+      right: 15%
+
     +media-1024
       right: 20%
 
+    +media-992
+      right: 10%
+      top: 10%
+
     +media-768
       width: 10vw
-      top: 10%
-      right: 25%
+      top: 12%
+      right: 21%
 
     +media-576
       top: 20%
@@ -86,6 +93,13 @@
     +media-1600
       left: 12%
       top: 42%
+
+    +media-1105
+      left: 3%
+      top: 48%
+
+    +media-992
+      top: 55%
 
     +media-860
       top: 55%
@@ -110,12 +124,20 @@
       right: 34%
       top: 65%
 
+    +media-1105
+      right: 20%
+      top: 69%
+
     +media-1024
       right: 24%
 
+    +media-992
+      right: 13%
+      top: 62%
+
     +media-768
-      width: 9vw
-      right: 23%
+      right: 21%
+      top: 65%
 
     +media-576
       display: none
@@ -128,8 +150,9 @@
   padding-left: 75px
   letter-spacing: 2px
 
-  //&-animate
-    +animate-eff
+  +media-768
+    padding-left: 0
+
 
   +media-576
     font-size: 9vw
@@ -211,6 +234,9 @@
 
   +media-860
     width: 550px
+
+  +media-800
+    width: 595px
 
   +media-768
     width: 445px

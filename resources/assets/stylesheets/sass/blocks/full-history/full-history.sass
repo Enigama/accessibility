@@ -1,3 +1,13 @@
+.js-history-last
+  &_active
+    +media-1070
+      width: 650px
+
+    +media-992
+      width: 100%
+      padding-left: 50px
+      padding-right: 50px
+
 .full-history
   display: none
   width: 700px
@@ -5,7 +15,8 @@
   padding-top: 45px
   //overflow-y: scroll
 
-
+  +media-992
+    width: 100%
 
   +clearfix
 
@@ -14,6 +25,10 @@
 
   &_disable
     display: none
+
+  &-content
+    padding-right: 60px
+
 
 
 
