@@ -132,24 +132,28 @@ class Application {
 
       prevArrow: '<a href="#" class="history__prev"></a>',
       nextArrow: '<a href="#" class="history__next"></a>',
+      //slickCurrentSlide: 1,
 
       customPaging: function (slider, i) {
-        var curslide = i + 1;
-          console.log(curslide.valueOf());
-          return '<a class="history__pagin">' + curslide + '</a>';
+          var curslide = i + 1;
+          console.log(curslide +'/'+slider.slideCount);
+
+          return '<a class="history__pagin">'+'<span class="currenslide_active">'+ curslide +'</span>' +'<span class="slesh__slide">'+'/'+'</span>'+'<span class="all_slide">' + slider.slideCount +'</span>'+ '</a>';
       },
 
-      responsive: [{
+
+      /*responsive: [{
           breakpoint: 576,
           settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-          }
+              slidesToShow: 3,
 
-      }],
+          },
+
+      }],*/
 
 
     });
+
 
     $('.footer-slider').slick({
         dots: true,
@@ -157,6 +161,8 @@ class Application {
 
 
     });
+
+
   }
 
 
@@ -179,6 +185,8 @@ class Application {
         .addClass('full-history_active');
       //$historylast.css('width','700');
       $historylast.addClass('js-history-last_active');
+      $('.history__logo').addClass('full__history__logo');
+      //$('.logo-title').addClass('logo-title_full');
 
     });
 
@@ -194,6 +202,9 @@ class Application {
       $historyLastSlider.css('display','block')
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
+      $('.history__logo').removeClass('full__history__logo');
+
+
 
     });
 

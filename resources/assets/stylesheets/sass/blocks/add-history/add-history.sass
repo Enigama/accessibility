@@ -26,11 +26,33 @@
 .history__title__add
   text-align: center
 
+  +media-420
+    font-size: 13vw
+
+  +media-320
+    font-size: 17vw
+
 .history__text__add
   color: #a0cc36
   font-family: gothamPB
   font-size: 16px
   text-align: center
+
+  +media-420
+    font-size: 4vw
+
+  +media-320
+    font-size: 5vw
+
+  &_lg
+    +media-320
+      display: none
+
+  &_sm
+    display: none
+
+    +media-320
+      display: block
 
 .history__add__text
   width: 720px

@@ -8,6 +8,7 @@
       padding-left: 50px
       padding-right: 50px
 
+
 .full-history
   display: none
   width: 700px
@@ -29,16 +30,26 @@
   &-content
     padding-right: 60px
 
+    +media-685
+      text-align: center
+      padding-right: 0
+
 
 
 
 .arrow__back
   padding-right: 15px
   
+.full__history__logo
+  float: none
+  
 .full__title
   float: left
   margin-top: 20px
   padding-left: 10px
+
+  +media-685
+    float: none
   
 .full-feed
   clear: both
@@ -46,10 +57,18 @@
   padding-top: 15px
   padding-left: 0px
 
+  +media-685
+    text-align: center
+    padding-left: 35px
+
 
 .js-history-back
   float: right
   margin-top: 15px
+
+  +media-685
+    float: none
+
 
 .full-history .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
   background-color: #9ecb32

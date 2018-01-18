@@ -25,6 +25,10 @@
       font-size: 50px
       padding-right: 0
 
+//.history-last-slider > .slick-slide
+  +media-576
+    width: 100%
+
 .history-last > .slick-slider
   width: 760px
   //798
@@ -50,6 +54,7 @@
 
 .slick-track > .slick-slide
   width: 770px
+
 
 
 
@@ -97,6 +102,7 @@
     display: flex
     flex-direction: column
     justify-content: center
+    width: 100%
 
 .history-left > .history-one
 
@@ -114,6 +120,9 @@
 
   +media-1000
     width: 32vw
+
+  +media-915
+    width: 33vw
 
   +media-900
     width: 34vw
@@ -171,6 +180,11 @@
 
 .history__logo
   float: left
+
+  &_full
+    +media-576
+      float: none
+    
   
   +media-576
     float: none
@@ -198,6 +212,7 @@
   color: #444
   //padding-bottom: 10px
   margin-top: 0
+
 
   +media-1155
     font-size: 15px
@@ -313,83 +328,128 @@
     cursor: pointer
 
 .history__prev
-  bottom: -33px
+  bottom: -37px
   left: 35%
 
+  +media-992
+    left: 40%
+
+  +media-768
+    left: 38%
+
   +media-685
-    bottom: -75px
-    left: 32%
+    bottom: -66px
+    left: 37%
 
   +media-640
     left: 33%
 
   +media-576
-    left: 29%
+    display: none
 
-  +media-500
+  //+media-500
     left: 24%
 
-  +media-420
+  //+media-420
     left: 22%
 
-  +media-380
+  //+media-380
     left: 18%
 
-  +media-356
+  //+media-356
     left: 15%
 
 .history__next
   transform: rotate(-180deg)
   transform-origin: 50% 20%
-  right: 33%
-  bottom: -33px
+  right: 42%
+  bottom: -35px
+
+  +media-768
+    right: 39%
 
   +media-685
-    right: 30%
-    bottom: -75px
+    right: 36%
+    bottom: -66px
 
   +media-640
     right: 30%
 
   +media-576
-    right: 25%
+    display: none
 
-  +media-500
+  //+media-500
     right: 20%
 
-  +media-420
+  //+media-420
     right: 18%
 
-  +media-380
+  //+media-380
     right: 14%
 
-  +media-356
+  //+media-356
     right: 10%
 
 .history__pagin
+  font-family: gothamPBo
   padding: 10px 15px
-  border-radius: 50px
-  background: #d0d0d0
-  color: #fff
+  //border-radius: 50px
+  //background: #d0d0d0
+  color: #9ecb32
 
   &:hover
-    color: #fff
-    background: #9ecb32
+    color: #9ecb32
+    //background: #9ecb32
 
+.currenslide_active
+  font-size: 30px
+  padding-right: 5px
 
-.history-last-slider > ul > li
+.all_slide
+  font-size: 18px
+  padding-left: 10px
+
+.slesh__slide
+  font-size: 24px
+  padding-left: 5px
+
+.history-last-slider > ul > li:not(.slick-active)
   margin-left: 15px
   margin-right: 15px
+  display: none
 
 .history-last-slider > ul > .slick-active > .history__pagin
-  background: #9ecb32
+  background: inherit
+  color: #9ecb32
 
 .history-last-slider > .slick-dots
   z-index: 1
+  width: 12%
+  left: 40%
+  bottom: -35px
+
+  +media-992
+    left: 43%
 
   +media-685
     bottom: -65px
 
+  +media-576
+    display: none
 
 
+.history-last-slider > .slick-dots > li
+  width: auto
+  height: auto
 
+.history__more
+  display: none
+  text-align: center
+  border: 0px
+
+  +media-576
+    display: block
+
+  &_success
+    background: #9ecb32
+    color: #fff

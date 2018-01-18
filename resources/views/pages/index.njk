@@ -28,7 +28,9 @@
 
 	    <div class="add-history add-history_disable">
 		    <h2 class="history__title history__title__add">Ваша история</h2>
-		    <p class="history__text__add">Расскажи о лучшем блюде в вашей<br>жизни и отправьие историю нам</p>
+		    <p class="history__text__add history__text__add_lg">Расскажи о лучшем блюде в вашей<br>жизни и отправьте историю нам</p>
+		    <p class="history__text__add history__text__add_sm">Расскажи о лучшем блюде<br> в вашей жизни и отправьте<br> историю нам</p>
+
 		    <textarea name="text" class="history__add__text" maxlength="1000"
 		    ></textarea>
 		    {#cols="80" rows="17"#}
@@ -191,7 +193,7 @@
             {% for history in histories %}
 				<div id="{{ history.id }}" class="full-history full-history_disable ">
 					<div class="full-history-content">
-						<img class="history__logo logo-first" src="{{ history.image }}">
+						<img class="history__logo js__logo logo-first" src="{{ history.image }}">
 						<h5 id="logo-title" class="logo-title full__title">{{ history.title }}</h5>
 						<a href="#" class="whatch__full js-history-back"><img class="arrow__back" src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всем историям</a>
 					</div>
@@ -232,6 +234,7 @@
 					</div>
                 {% endfor %}
             </div>
+	        <a href="#" class="simple__btn history__more history__more_success">Больше историй</a>
         </div>
     </div>
 </div>
