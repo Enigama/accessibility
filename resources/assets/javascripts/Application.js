@@ -186,7 +186,7 @@ class Application {
       //$historylast.css('width','700');
       $historylast.addClass('js-history-last_active');
       $('.history__logo').addClass('full__history__logo');
-      //$('.logo-title').addClass('logo-title_full');
+      $('.history__more_success').css('display','none');
 
     });
 
@@ -203,8 +203,7 @@ class Application {
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
       $('.history__logo').removeClass('full__history__logo');
-
-
+      $('.history__more_success').css('display','block');
 
     });
 
