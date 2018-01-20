@@ -87,13 +87,20 @@ class Application {
     $('.history__text_top').css('display', 'none');
 
 
+    $('.history__send').on('click', function (event) {
+        event.preventDefault();
+        $('.history-last').addClass('history-last_disable');
+        $('.add-history').removeClass('add-history_disable');
+        $('.add-history').addClass('add-history_active');
+    });
+
     $('.simple__social').on('click', function (event) {
       event.preventDefault();
       if ($('.add-history').hasClass('add-history_disable')){
 
-          $('.history-last').addClass('history-last_disable');
-          $('.add-history').removeClass('add-history_disable');
-          $('.add-history').addClass('add-history_active');
+          //$('.history-last').addClass('history-last_disable');
+          //$('.add-history').removeClass('add-history_disable');
+          //$('.add-history').addClass('add-history_active');
 
           $('.history__text_top').css('display', 'block');
 
