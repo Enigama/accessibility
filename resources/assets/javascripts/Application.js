@@ -33,6 +33,44 @@ class Application {
         theme: "dark"
 
     });
+
+
+
+    $(window).scroll(function () {
+       var paral_top =$(this).scrollTop();
+       $('.sheet').css({
+          'transform': 'translate(0%, '+-paral_top/4+'%)'
+       });
+        //console.log(paral_top);
+
+    /*MAIN PARALAX
+        var $win = $(window);
+        if($win.scrollTop() + $win.height() > $('.basil__main').offset().top) {
+
+            var paral_victory =$(this).scrollTop()/10;
+
+            $('.basil__main').css({
+                'transform': 'translate(0%, '+-paral_victory+'%)'
+            });
+            //console.log(paral_victory); //выполняем действия если элемент виден
+        }
+    END MAIN*/
+
+      /*FOOTER PARALLAX
+
+        if($win.scrollTop() + $win.height() > $('.basil-first').offset().top) {
+
+            var paral_footer =$(this).scrollTop();
+
+            $('.basil-first').css({
+                'transform': 'translate(0%, '+paral_footer/12+'%)'
+            });
+            console.log(paral_footer); //выполняем действия если элемент виден
+        }
+
+      END FOOTER*/
+    });
+
   }
 
   initTextCount(){
@@ -203,7 +241,9 @@ class Application {
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
       $('.history__logo').removeClass('full__history__logo');
-      $('.history__more_success').css('display','block');
+      if($windiw.width <= 549){
+          $('.history__more_success').css('display','block');
+      }
 
     });
 

@@ -1,7 +1,7 @@
 {% extends "layouts/layout.njk" %}
 
 {% block content %}
-<div class="container">
+<div class="container" data-aos="fade-up" data-aos-delay="120" data-aos-duration="1000" >
     <!-- EXAMPLE REQUIRE IMG -->
     {#<img src="/assets/images/square.png" alt="">#}
     {#<div style="background-image: url(${require('/assets/images/square3.png')}); height: 100px"></div>#}
@@ -187,7 +187,7 @@
         ] %}
 
         <div class="history-last js-history-last">
-            <h2 data-aos="fade-right" class="history-last__titile js-history-title-all" >Последние Истории</h2>
+            <h2 class="history-last__titile js-history-title-all" >Последние Истории</h2>
 	        {#data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"#}
             <h2 class="history-last__titile js-history-title" style="display: none">История</h2>
             {% for history in histories %}
@@ -198,7 +198,9 @@
 						<a href="#" class="whatch__full js-history-back"><img class="arrow__back" src="/assets/images/left-arrow-green.png" alt="">Вернуться ко всем историям</a>
 					</div>
 					<div class="history-feed full-feed">
-						<p id="feed" class="feed">{{ history.text|safe }}</p>
+						<p id="feed" class="feed">{{ history.text|safe }}
+							lorem1000
+						</p>
 					</div>
 				</div>
             {% endfor %}
@@ -239,16 +241,16 @@
     </div>
 </div>
 
-<div id="victory" class="container-fluid victory">
+<div id="victory" class="container-fluid victory" data-aos="fade-up" data-aos-delay="120" data-aos-duration="1000">
 	{#absolut basil#}
-	<img class="basil basil__main__one" src="/assets/images/bsil-last-main_first.png">
-	<img class="basil basil__main__second" src="/assets/images/basil-last-main_second.png">
-	<img class="basil basil__main__third" src="/assets/images/basil-last-main_third.png">
+	<img class="basil basil__main basil__main__one" src="/assets/images/bsil-last-main_first.png">
+	<img class="basil basil__main basil__main__second" src="/assets/images/basil-last-main_second.png">
+	<img class="basil basil__main basil__main__third" src="/assets/images/basil-last-main_third.png">
 	{##}
     <div class="container">
         <div class="victory-concurs">
 
-            <span data-aos="fade-right" class="victory__title">Победитель конкурса</span>
+            <span class="victory__title">Победитель конкурса</span>
             <span class="victory__text">Будет объявлен 20 ноября 2017 года</span>
 
             <span class="victory__last__day">До  конца  конкурса  осталось:</span>
