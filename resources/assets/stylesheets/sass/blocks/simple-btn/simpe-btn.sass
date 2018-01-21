@@ -1,4 +1,5 @@
 .simple__btn
+  z-index: 3
   width: 227px
   height: 50px
   display: block
@@ -6,26 +7,45 @@
   line-height: 45px
   border-radius: 50px
   border: 2px solid #fff
+  text-align: center
+  outline: none
   font-family: gothamPB
   font-size: 17px
-  -webkit-box-shadow: 0px 4px 20px 0px rgba(50, 50, 50, 0.5)
-  -moz-box-shadow:    0px 4px 20px 0px rgba(50, 50, 50, 0.5)
-  box-shadow:         0px 4px 20px 0px rgba(50, 50, 50, 0.5)
-
-  &_success
-    background: #a3cd3c
-    border-color: #a3cd3c
-    text-align: center
-    color: #fff
-    margin-top: 15px
+  transition: .3s
+  //-webkit-box-shadow: 0px 4px 20px 0px rgba(50, 50, 50, 0.5)
+  //-moz-box-shadow:    0px 4px 20px 0px rgba(50, 50, 50, 0.5)
+  //box-shadow:         0px 4px 20px 0px rgba(50, 50, 50, 0.5)
 
   &:hover
     text-decoration: none
     color: #000
+    transition: .3s
 
   &:active
     text-decoration: none
     color: #000
+  
+  &_success
+    background: #a3cd3c
+    border-color: #a3cd3c
+    //text-align: center
+    color: #fff
+    margin-top: 15px
+    transition: .3s
+
+    &:hover
+      background: transparent
+      transition: .3s
+
+    &:focus
+      outline: none
+
+  &_transparent
+    background: #fff
+
+    &:hover
+      background: transparent
+
 
   +media-1070
     width: 210px
