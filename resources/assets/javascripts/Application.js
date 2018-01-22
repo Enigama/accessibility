@@ -1,6 +1,9 @@
 //VENDORS
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
+
+require('jquery-parallax.js/parallax.min');
+
 import AOS from 'aos'
 
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
@@ -44,7 +47,7 @@ class Application {
         //console.log(paral_top);
 
     /*MAIN PARALAX
-        var $win = $(window);
+      var $win = $(window);
         if($win.scrollTop() + $win.height() > $('.basil__main').offset().top) {
 
             var paral_victory =$(this).scrollTop()/10;
@@ -63,12 +66,13 @@ class Application {
             var paral_footer =$(this).scrollTop();
 
             $('.basil-first').css({
-                'transform': 'translate(0%, '+paral_footer/12+'%)'
+                'transform': 'translate(0%, '+-paral_footer/-12+'%)'
             });
             console.log(paral_footer); //выполняем действия если элемент виден
         }
 
       END FOOTER*/
+
     });
 
   }
@@ -250,7 +254,7 @@ class Application {
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
       $('.history__logo').removeClass('full__history__logo');
-      if($windiw.width <= 549){
+      if($window.width <= 549){
           $('.history__more_success').css('display','block');
       }
 

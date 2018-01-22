@@ -23,6 +23,7 @@
     "html-loader": "^0.5.1",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.0",
+    "jquery-parallax.js": "^1.5.0",
     "node-bourbon": "^4.2.8",
     "node-reset-scss": "^1.0.1",
     "node-sass": "^4.5.3",

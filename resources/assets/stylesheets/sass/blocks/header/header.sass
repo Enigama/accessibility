@@ -76,6 +76,9 @@
 .remember
   position: relative
 
+  +media-992
+    z-index: 2
+
 .page--header::after
   position: absolute
   bottom: 0
@@ -439,7 +442,7 @@
     font-size: 5vw
 
 .remember__step__text
-  font-family: gothamPB
+  font-family: gothamPBo
   display: block
   font-size: 20px
   color: #9ecb32
@@ -645,6 +648,8 @@
   &__second
     left: 10%
     top: 80%
+    width: 85px
+    height: 65px
 
     +media-1735
       left: 6%
