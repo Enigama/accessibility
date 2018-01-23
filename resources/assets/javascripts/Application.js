@@ -2,9 +2,12 @@
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
-require('jquery-parallax.js/parallax.min');
+//require('jquery-parallax.js/parallax.min');
 
 import AOS from 'aos'
+
+import SmoothScroll from 'smoothscroll-for-websites';
+import Rellax from 'rellax';
 
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
@@ -18,6 +21,9 @@ class Application {
   constructor () {
     console.log('application start');
 
+    SmoothScroll();
+
+    this.rellax = new Rellax('.js-rellax-obj')
 
     this.initScrollY();
     this.initHistoryFull();
@@ -34,47 +40,7 @@ class Application {
     $('.full-history').mCustomScrollbar({
         axis:"y",
         theme: "dark"
-
     });
-
-
-
-    $(window).scroll(function () {
-       var paral_top =$(this).scrollTop();
-       $('.sheet').css({
-          'transform': 'translate(0%, '+-paral_top/4+'%)'
-       });
-        //console.log(paral_top);
-
-    /*MAIN PARALAX
-      var $win = $(window);
-        if($win.scrollTop() + $win.height() > $('.basil__main').offset().top) {
-
-            var paral_victory =$(this).scrollTop()/10;
-
-            $('.basil__main').css({
-                'transform': 'translate(0%, '+-paral_victory+'%)'
-            });
-            //console.log(paral_victory); //выполняем действия если элемент виден
-        }
-    END MAIN*/
-
-      /*FOOTER PARALLAX
-
-        if($win.scrollTop() + $win.height() > $('.basil-first').offset().top) {
-
-            var paral_footer =$(this).scrollTop();
-
-            $('.basil-first').css({
-                'transform': 'translate(0%, '+-paral_footer/-12+'%)'
-            });
-            console.log(paral_footer); //выполняем действия если элемент виден
-        }
-
-      END FOOTER*/
-
-    });
-
   }
 
   initTextCount(){
@@ -139,10 +105,12 @@ class Application {
 
 
   initAnimate(){
-    AOS.init();
+    //AOS.init();
 
     $(window).on('load', () => {
-      setTimeout( () => AOS.refresh(true), 0 )
+      setTimeout( () => {
+        AOS.init();
+      }, 0)
     })
   }
 

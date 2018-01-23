@@ -7,11 +7,11 @@ const ASSET_PATH = process.env.ASSET_PATH;
 
 const extractSass = new ExtractTextPlugin({
     filename: 'css/[name].css',
-    disable: (process.env.NODE_ENV === 'development')
+    //disable: (process.env.NODE_ENV === 'development')
 });
 
 const sassExtractor = () => {
-    return extractSass.extract({
+    return ['css-hot-loader'].concat(extractSass.extract({
         use: [{
             loader: "css-loader",
             options: {
@@ -31,7 +31,7 @@ const sassExtractor = () => {
             }
         }],
         fallback: "style-loader"
-    })
+    }))
 };
 
 module.exports = {

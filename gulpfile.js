@@ -62,7 +62,7 @@ gulp.task("webpack-dev-server", function(callback) {
 
     // modify some webpack config options
     let devWebpackConfig = Object.create(webpackConfig);
-    devWebpackConfig.devtool = "eval";
+    devWebpackConfig.devtool = "inline";
     devWebpackConfig.entry.app.unshift(`webpack-dev-server/client?http://${SERVER_HOST}:${SERVER_PORT}/`);
     devWebpackConfig.entry.app.unshift("webpack/hot/dev-server");
     devWebpackConfig.plugins.push( new webpack.HotModuleReplacementPlugin() );
