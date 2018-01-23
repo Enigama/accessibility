@@ -1,6 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const autoprefixer = require('autoprefixer');
 
 const ASSET_PATH = process.env.ASSET_PATH;
 
@@ -19,6 +20,19 @@ const sassExtractor = () => {
                 root: path.resolve(__dirname, 'resources'),
                 minimize: (process.env.NODE_ENV === 'production')
             }
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true,
+            plugins: [
+              //require('postcss-import')({ root: loader.resourcePath }),
+              //require('postcss-cssnext')(),
+              autoprefixer({
+                browsers:['ie >= 9', 'last 4 version', "> 1%"]
+              }),
+              //require('cssnano')()
+            ]
+          }
         }, {
             loader: "sass-loader",
             options: {
