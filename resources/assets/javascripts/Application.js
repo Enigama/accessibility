@@ -191,9 +191,12 @@ class Application {
     let $titleSlider = $('.js-history-title-all');
     let $title = $('.js-history-title');
     let $historylast = $('.js-history-last');
+      let feed = $('#feed').text();
 
     $('.js-show-history').on('click', function (event) {
       event.preventDefault();
+
+
       let $this = $(this);
       let $fullHistory = $($this.attr('href'))
       $historyLastSlider.css('display','none')
