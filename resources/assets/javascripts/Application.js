@@ -151,7 +151,11 @@ class Application {
 
       prevArrow: '<a href="#" class="history__prev"></a>',
       nextArrow: '<a href="#" class="history__next"></a>',
-      //slickCurrentSlide: 1,
+
+      responsive:[{
+        breakpoints: 576,
+          settings: "unslick",
+      }],
 
       customPaging: function (slider, i) {
           var curslide = i + 1;
@@ -159,17 +163,6 @@ class Application {
 
           return '<a class="history__pagin">'+'<span class="currenslide_active">'+ curslide +'</span>' +'<span class="slesh__slide">'+'/'+'</span>'+'<span class="all_slide">' + slider.slideCount +'</span>'+ '</a>';
       },
-
-
-      /*responsive: [{
-          breakpoint: 576,
-          settings: {
-              slidesToShow: 3,
-
-          },
-
-      }],*/
-
 
     });
 
@@ -191,26 +184,47 @@ class Application {
     let $titleSlider = $('.js-history-title-all');
     let $title = $('.js-history-title');
     let $historylast = $('.js-history-last');
-      let feed = $('#feed').text();
 
-    $('.js-show-history').on('click', function (event) {
-      event.preventDefault();
+      var bt = document.getElementsByClassName('js-show-history');
+      var test = document.getElementsByClassName('full__fid');
 
+      for(var i = 0; i < bt.length; i++){
+          bt[i].setAttribute('current', i);
+          bt[i].onclick = function (event) {
+              event.preventDefault();
 
-      let $this = $(this);
-      let $fullHistory = $($this.attr('href'))
-      $historyLastSlider.css('display','none')
-      $titleSlider.css('display','none')
-      $title.css('display','block');
-      $fullHistory
-        .removeClass('full-history_disable')
-        .addClass('full-history_active');
-      //$historylast.css('width','700');
-      $historylast.addClass('js-history-last_active');
-      $('.history__logo').addClass('full__history__logo');
-      $('.history__more_success').css('display','none');
+              let $this = $(this);
+              let $fullHistory = $($this.attr('href'));
 
-    });
+              var words = $fullHistory.text();
+              //console.log(words.length);
+
+              if(words.length <= 270){
+                  if (this.innerHTML == 'Скрыть') {
+                      test[this.getAttribute('current')].style.display = 'none';
+                      this.innerHTML = 'Читать полностью';
+                  } else {
+                      test[this.getAttribute('current')].style.display = 'block';
+                      this.innerHTML = 'Скрыть';
+                      //console.log(test[this.getAttribute('current')])
+                      console.log(words);
+                  }
+
+              }else{
+                  $historyLastSlider.css('display','none');
+                  $titleSlider.css('display','none');
+                  $title.css('display','block');
+                  $fullHistory
+                      .removeClass('full-history_disable')
+                      .addClass('full-history_active');
+                  $historylast.addClass('js-history-last_active');
+                  $('.history__logo').addClass('full__history__logo');
+                  $('.history__more_success').css('display','none');
+                  $('.full__fid').css('display','block');
+              }
+          }
+      }
+
 
     $('.js-history-back').on('click', function (event) {
       event.preventDefault();
@@ -219,13 +233,15 @@ class Application {
         .parents('.full-history')
         .addClass('full-history_disable')
         .removeClass('full-history_active');
-      $titleSlider.css('display','block')
-      $title.css('display','none')
-      $historyLastSlider.css('display','block')
+      $titleSlider.css('display','block');
+      $title.css('display','none');
+      $historyLastSlider.css('display','block');
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
       $('.history__logo').removeClass('full__history__logo');
-      if($window.width <= 549){
+      $('.full__fid').css('display','none');
+
+      if($(window).width <= 549){
           $('.history__more_success').css('display','block');
       }
 

@@ -314,7 +314,7 @@
     text-decoration: none
 
 
-.history__prev, .history__next
+.history-last-slider > .history__prev, .history-last-slider > .history__next
   z-index: 2
   position: absolute
   display: block
@@ -327,6 +327,9 @@
 
   &:hover
     cursor: pointer
+
+  +media-576
+    display: none !important
 
 .history__prev
   bottom: -37px
@@ -345,7 +348,7 @@
   +media-640
     left: 33%
 
-  +media-576
+  //+media-576
     display: none
 
   //+media-500
@@ -376,7 +379,7 @@
   +media-640
     right: 30%
 
-  +media-576
+  //+media-576
     display: none
 
   //+media-500
@@ -401,6 +404,9 @@
   &:hover
     color: #9ecb32
     //background: #9ecb32
+
+  +media-576
+    display: none !important
 
 .currenslide_active
   font-size: 30px
@@ -436,7 +442,7 @@
     bottom: -65px
 
   +media-576
-    display: none
+    display: none !important
 
 
 .history-last-slider > .slick-dots > li
@@ -446,10 +452,12 @@
 .history__more
   display: none
   text-align: center
-  border: 0px
+  //border: 0px
 
   +media-576
     display: block
+
+
 
 
 
