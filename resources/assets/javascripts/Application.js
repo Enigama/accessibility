@@ -202,12 +202,14 @@ class Application {
               if(words.length <= 270){
                   if (this.innerHTML == 'Скрыть') {
                       test[this.getAttribute('current')].style.display = 'none';
+                      $this.siblings('.feed').children('.full__fid').css('display','none');
                       this.innerHTML = 'Читать полностью';
                   } else {
                       test[this.getAttribute('current')].style.display = 'block';
+                      $this.siblings('.feed').children('.full__fid').css('display','block');
                       this.innerHTML = 'Скрыть';
                       //console.log(test[this.getAttribute('current')])
-                      console.log(words);
+                      //console.log($this.siblings('.feed').children().css('display','block'));
                   }
 
               }else{
