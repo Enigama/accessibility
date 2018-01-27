@@ -56,9 +56,6 @@
 .slick-track > .slick-slide
   width: 770px
 
-
-
-
 .history-people
   position: relative
   padding-top: 35px
@@ -214,10 +211,8 @@
   //padding-bottom: 10px
   margin-top: 0
 
-
   +media-1155
     font-size: 15px
-
 
 .feed
   font-family: gothamPL
@@ -252,7 +247,6 @@
   font-size: 15px
   color: #9ecb33
   margin-top: 10px
-  //margin-bottom: 15px
 
   &:hover
     text-decoration: none
@@ -275,9 +269,6 @@
 
 .history-right
   float: left
-
-  //+media-1225
-    margin-right: 20px
 
   +media-1152
     margin-right: 0px
@@ -348,21 +339,6 @@
   +media-640
     left: 33%
 
-  //+media-576
-    display: none
-
-  //+media-500
-    left: 24%
-
-  //+media-420
-    left: 22%
-
-  //+media-380
-    left: 18%
-
-  //+media-356
-    left: 15%
-
 .history__next
   transform: rotate(-180deg)
   transform-origin: 50% 20%
@@ -379,31 +355,13 @@
   +media-640
     right: 30%
 
-  //+media-576
-    display: none
-
-  //+media-500
-    right: 20%
-
-  //+media-420
-    right: 18%
-
-  //+media-380
-    right: 14%
-
-  //+media-356
-    right: 10%
-
 .history__pagin
   font-family: gothamPBo
   padding: 10px 15px
-  //border-radius: 50px
-  //background: #d0d0d0
   color: #9ecb32
 
   &:hover
     color: #9ecb32
-    //background: #9ecb32
 
   +media-576
     display: none !important
@@ -419,6 +377,10 @@
 .slesh__slide
   font-size: 24px
   padding-left: 5px
+
+.history-last-slider:focus, .history-slider:focus
+  +media-576
+    outline: none
 
 .history-last-slider > ul > li:not(.slick-active)
   margin-left: 15px
@@ -449,11 +411,14 @@
   width: auto
   height: auto
 
+.history-slider
+  +media-576
+    display: none
+
 .history__more
   display: none
   text-align: center
   //border: 0px
-
   +media-576
     display: block
 

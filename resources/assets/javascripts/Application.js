@@ -31,6 +31,7 @@ class Application {
     this.initTextCount();
     this.initAnimate();
     this.initMobileMenu();
+    this.initMobileSlideHistory();
     this.initEventSlick();
     this.initEvents();
 
@@ -85,7 +86,6 @@ class Application {
       }
     });
 
-
     $('.simple__btn_success').on('click', function (event) {
       event.preventDefault();
 
@@ -96,11 +96,8 @@ class Application {
         $('.history__send').removeClass('history__send_disable');
         $('.history__chois').removeClass('history__chois_disable');
 
-      console.log('WARNING, no send your histtory');
+      //console.log('WARNING, no send your histtory');
     })
-
-
-
   }
 
 
@@ -140,9 +137,7 @@ class Application {
 
   }
 
-
   initEventSlick () {
-
     $('.history-last-slider').slick({
       dots: true,
 
@@ -166,17 +161,30 @@ class Application {
 
     });
 
+    /* UNSLICK SLIDE HISTORY 'destroy slider'*/
+    if($(window.width < 559)){
+        $('.history-last-slider').slick('unslick');
+    }
 
     $('.footer-slider').slick({
         dots: true,
         slidesToShow: 1,
-
-
     });
-
 
   }
 
+  initMobileSlideHistory(){
+    if($(window.width < 559)){
+
+        let slide_item = document.getElementsByClassName('history-slider');
+
+        console.log(typeof slide_item);
+
+        $('.history__more').on('click', function () {
+
+        });
+    }
+  }
 
   initHistoryFull(){
 
@@ -195,18 +203,18 @@ class Application {
 
               let $this = $(this);
               let $fullHistory = $($this.attr('href'));
-
               var words = $fullHistory.text();
               //console.log(words.length);
 
               if(words.length <= 270){
                   if (this.innerHTML == 'Скрыть') {
-                      test[this.getAttribute('current')].style.display = 'none';
+                      //test[this.getAttribute('current')].style.display = 'none';
                       $this.siblings('.feed').children('.full__fid').css('display','none');
                       this.innerHTML = 'Читать полностью';
                   } else {
-                      test[this.getAttribute('current')].style.display = 'block';
+                      //test[this.getAttribute('current')].style.display = 'block';
                       $this.siblings('.feed').children('.full__fid').css('display','block');
+                      $this.siblings('.feed').children('.full__fid').children('br').css('display','block');
                       this.innerHTML = 'Скрыть';
                       //console.log(test[this.getAttribute('current')])
                       //console.log($this.siblings('.feed').children().css('display','block'));
@@ -220,9 +228,20 @@ class Application {
                       .removeClass('full-history_disable')
                       .addClass('full-history_active');
                   $historylast.addClass('js-history-last_active');
+
                   $('.history__logo').addClass('full__history__logo');
                   $('.history__more_success').css('display','none');
+
                   $('.full__fid').css('display','block');
+                  $('.full__fid').children('br').css('display','none');
+
+                  $('.feed').children('br').css('display','none');
+
+
+                 if($(window).width < 577){
+                     $('.history__more').css('display','none');
+                     console.log($(window).width());
+                 }
               }
           }
       }
@@ -242,6 +261,8 @@ class Application {
       $historylast.removeClass('js-history-last_active');
       $('.history__logo').removeClass('full__history__logo');
       $('.full__fid').css('display','none');
+      $('.full__fid').children('br').css('display','none');
+      $('.feed').children('br').css('display','block');
 
       if($(window).width <= 549){
           $('.history__more_success').css('display','block');
