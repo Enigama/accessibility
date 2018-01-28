@@ -3,8 +3,17 @@
   display: none
   width: 830px
   text-align: center
-  padding-top: 125px
+  padding-top: 155px
   padding-left: 0px
+
+  +media-860
+    width: 730px
+
+  +media-768
+    width: 550px
+
+  +media-640
+    width: auto
 
   &_active
     display: block
@@ -25,6 +34,12 @@
       width: 25%
       background: url("../../images/dottet-victory-chois_right.png") no-repeat
 
+      +media-860
+        width: 20%
+
+      +media-768
+        left: 0
+        width: 30%
 
     &_right
       right: 10%
@@ -33,6 +48,16 @@
       background: url("../../images/dottet-victory-chois_left.png") no-repeat
       background-position-x: -150px
 
+      +media-860
+        width: 20%
+
+      +media-768
+        right: -3%
+        width: 35%
+
+      +media-576
+        right: 0%
+        width: 30%
 
 
 .victory__title_left
@@ -44,7 +69,25 @@
   justify-content: center
   width: 30%
   margin: 0 auto
-  //float: left
+
+  +media-768
+    width: 40%
+
+  +media-500
+    width: 50%
+
+  +media-420
+    z-index: 2
+    width: 60%
+
+  +media-380
+    width: 65%
+
+  +media-356
+    width: 70%
+
+  +media-320
+    width: 80%
 
   &__item
     height: 165px
@@ -56,6 +99,10 @@
       background-position-x: -60px
       width: 20%
       margin-right: -15px
+
+      +media-576
+        background-position-x: -68px
+
 
     &_right
       background: url("../../images/logo-pepper_right.png") no-repeat

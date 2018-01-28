@@ -113,26 +113,22 @@ class Application {
 
   initMobileMenu(){
     $('.btn-gamb').on('click', function () {
-        //if($('.mobile-menu').hasClass('mobile-menu-active')){
-           /* $('.mobile-menu').removeClass('mobile-menu-active');
-            $('.btn-gamb').removeClass('btn-gamb-active');
-            $('.btn-cencel').removeClass('btn-cencel-active');
-            $('.mobile-menu-content').removeClass('mobile-menu-content-active');*/
-        //}else {
-            $('.mobile-menu').removeClass('mobile-menu-disable');
-            $('.mobile-menu').addClass('mobile-menu-active');
-            $('.btn-gamb').addClass('btn-gamb-destroy');
-            $('.btn-cencel').addClass('btn-cencel-active');
-            $('.mobile-menu-content').addClass('mobile-menu-content-active');
 
-        //}
+        $('.mobile-menu').removeClass('mobile-menu-disable');
+        $('.mobile-menu').addClass('mobile-menu-active');
+        $('.btn-gamb').addClass('btn-gamb-destroy');
+        $('.btn-cencel').addClass('btn-cencel-active');
+        $('.mobile-menu-content').addClass('mobile-menu-content-active');
+
     });
     $('.btn-cencel').on('click', function () {
+
         $('.mobile-menu').removeClass('mobile-menu-active');
         $('.mobile-menu').addClass('mobile-menu-disable');
         $('.btn-gamb').removeClass('btn-gamb-destroy');
         $('.btn-cencel').removeClass('btn-cencel-active');
         $('.mobile-menu-content').removeClass('mobile-menu-content-active');
+
     });
 
   }
@@ -296,25 +292,6 @@ class Application {
   }
 
   initEvents () {
-
-    /*var btns = document.getElementsByClassName('whatch__full')
-    var full = document.getElementsByClassName('full__fid')
-
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].setAttribute('current', i)
-      btns[i].onclick = function () {
-        event.preventDefault()
-        if (this.innerHTML == 'Скрыть') {
-          full[this.getAttribute('current')].style.display = 'none'
-          this.innerHTML = 'Читать полностью'
-        } else {
-          full[this.getAttribute('current')].style.display = 'block'
-          this.innerHTML = 'Скрыть'
-        }
-      }
-    }*/
-
-
     var currTime = getTime()
     var hour = 0,
       minutes = 0,
