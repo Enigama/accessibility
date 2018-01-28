@@ -162,7 +162,7 @@ class Application {
     });
 
     /* UNSLICK SLIDE HISTORY 'destroy slider'*/
-    if($(window.width < 559)){
+    if($(window).width() < 560){
         $('.history-last-slider').slick('unslick');
     }
 
@@ -174,14 +174,28 @@ class Application {
   }
 
   initMobileSlideHistory(){
-    if($(window.width < 559)){
+    if($(window).width() < 560){
 
+        $('.history-slider:first').css('display','block');
         let slide_item = document.getElementsByClassName('history-slider');
 
-        console.log(typeof slide_item);
-
+        //console.log(slide_item.length);
+        let slide_num = 0;
         $('.history__more').on('click', function () {
+            if(slide_num < slide_item.length-1){
+                var a = $(this).siblings('.history-last-slider').children('.history-slider:not(:first)');
+                a[slide_num].style.display='block';
+                console.log(a[slide_num]);
+                slide_num++;
 
+                if(slide_num == slide_item.length-1){
+                    this.innerHTML = 'Cкрыть слайды';
+                    $('.history__more').addClass('history__back');
+                }
+                if($('.history__more').hasClass('history__back')){
+                    console.log('work');
+                }
+            }
         });
     }
   }
