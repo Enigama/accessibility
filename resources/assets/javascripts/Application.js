@@ -213,7 +213,7 @@ class Application {
     let $historylast = $('.js-history-last');
 
       var bt = document.getElementsByClassName('js-show-history');
-      var test = document.getElementsByClassName('full__fid');
+      //var test = document.getElementsByClassName('full__fid');
 
       for(var i = 0; i < bt.length; i++){
           bt[i].setAttribute('current', i);
@@ -223,6 +223,7 @@ class Application {
               let $this = $(this);
               let $fullHistory = $($this.attr('href'));
               var words = $fullHistory.text();
+
               //console.log(words.length);
 
               if(words.length <= 270){
@@ -240,6 +241,9 @@ class Application {
                   }
 
               }else{
+
+                  $('.history__more').css('display','none');
+
                   $historyLastSlider.css('display','none');
                   $titleSlider.css('display','none');
                   $title.css('display','block');
@@ -256,11 +260,6 @@ class Application {
 
                   $('.feed').children('br').css('display','none');
 
-
-                 if($(window).width < 577){
-                     $('.history__more').css('display','none');
-                     console.log($(window).width());
-                 }
               }
           }
       }
@@ -278,10 +277,15 @@ class Application {
       $historyLastSlider.css('display','block');
       $historylast.css('width','auto');
       $historylast.removeClass('js-history-last_active');
+
       $('.history__logo').removeClass('full__history__logo');
+
       $('.full__fid').css('display','none');
       $('.full__fid').children('br').css('display','none');
+
       $('.feed').children('br').css('display','block');
+
+      $('.history__more').css('display','block');
 
       if($(window).width <= 549){
           $('.history__more_success').css('display','block');
