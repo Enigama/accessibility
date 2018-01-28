@@ -191,10 +191,15 @@ class Application {
                 if(slide_num == slide_item.length-1){
                     this.innerHTML = 'Cкрыть слайды';
                     $('.history__more').addClass('history__back');
+                    return 0;
                 }
-                if($('.history__more').hasClass('history__back')){
-                    console.log('work');
-                }
+            }
+            if($('.history__more').hasClass('history__back')){
+                $('.history__more').removeClass('history__back');
+                $('.history-slider:not(:first)').css('display', 'none');
+                this.innerHTML = 'Больше историй';
+                slide_num = 0;
+                //console.log('work');
             }
         });
     }
