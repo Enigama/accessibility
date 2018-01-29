@@ -247,13 +247,16 @@
   font-size: 15px
   color: #9ecb33
   margin-top: 10px
+  transition: .3s
 
   &:hover
     text-decoration: none
-    color: #9ecb33
+    color: #759414
+    transition: .3s
+
 
   &:focus
-    color: #9ecb33
+    color: #759414
     outline: none
 
 .full__fid
@@ -310,14 +313,20 @@
   position: absolute
   display: block
   background: url("../../images/left-arrow-green.png") no-repeat
+
   width: 25px
   height: 25px
   margin-top: 25px
   margin-left: 10px
   margin-right: 10px
+  transition: .3s
+
 
   &:hover
     cursor: pointer
+    background: url("../../images/hover-arrow-left.png") no-repeat
+    transition: .3s
+
 
   +media-576
     display: none !important
@@ -343,7 +352,7 @@
   transform: rotate(-180deg)
   transform-origin: 50% 20%
   right: 42%
-  bottom: -35px
+  bottom: -37px
 
   +media-768
     right: 39%

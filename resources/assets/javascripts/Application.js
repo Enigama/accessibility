@@ -34,6 +34,38 @@ class Application {
     this.initMobileSlideHistory();
     this.initEventSlick();
     this.initEvents();
+    this.initSocial();
+
+  }
+
+  initSocial(){
+
+        $('.social__img_vk').on('mouseover', function () {
+            $('.social__img_vk').attr('src','/assets/images/hover-vk.png');
+            //console.log(this);
+        });
+        $('.social__img_vk').on('mouseout', function () {
+            $('.social__img_vk').attr('src','/assets/images/vk-sm.png');
+        });
+
+        $('.social__img_fb').on('mouseover', function () {
+            $('.social__img_fb').attr('src','/assets/images/hover-fb.png');
+            //console.log(this);
+        });
+        $('.social__img_fb').on('mouseout', function () {
+            $('.social__img_fb').attr('src','/assets/images/facebook-sm.png');
+        });
+
+        $('.social__img_inst').on('mouseover', function () {
+            $('.social__img_inst').attr('src','/assets/images/hover-inst.png');
+            // console.log(this);
+        });
+        $('.social__img_inst').on('mouseout', function () {
+            $('.social__img_inst').attr('src','/assets/images/instagram-sm.png');
+        });
+
+
+
 
   }
 
@@ -281,7 +313,9 @@ class Application {
 
       $('.feed').children('br').css('display','block');
 
-      $('.history__more').css('display','block');
+        if($(window).width() < 560){
+            $('.history__more').css('display','block');
+        }
 
       if($(window).width <= 549){
           $('.history__more_success').css('display','block');
