@@ -38,8 +38,11 @@
 
 
 .arrow__back
-  padding-right: 15px
-  
+  background: url("../../images/left-arrow-green.png") no-repeat
+  //padding-right: 15px
+  height: 15px
+  width: 40px
+
 .full__history__logo
   +media-685
     float: none
@@ -70,14 +73,23 @@
     text-align: left
 
 .js-history-back
+  display: flex
   float: right
   margin-top: 15px
+  line-height: 11px
 
   +media-685
     float: none
 
   +media-420
     font-size: 3.5vw
+
+  &:hover
+    transition: .3s
+    .arrow__back
+      transition: .3s
+      background: url("../../images/hover-arrow-left.png") no-repeat
+      
 
 .full-history .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
   background-color: #9ecb32
