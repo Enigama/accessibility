@@ -59,35 +59,21 @@
       margin-right: 15px
 
 .social__img
+  width: 70px
+  height: 70px
+  background: url("../../images/sircle.png") no-repeat
+  background-size: cover
+  font-size: 26px
+  line-height: 70px
+  color: #9ecb32
+  transition: .3s
+
+  +hov-icon
+
   +media-576
     width: 85px
 
   +media-356
     width: 70px
 
-  &_vk
-    width: 70px
-    height: 70px
-    background: url("../../images/vk-sm.png") no-repeat
-    background-size: cover
-    transition: .3s
 
-    +hov-vk
-
-  &_fb
-    width: 70px
-    height: 70px
-    background: url("../../images/facebook-sm.png") no-repeat
-    background-size: cover
-    transition: .3s
-
-    +hov-fb
-
-  &_inst
-    width: 70px
-    height: 70px
-    background: url("../../images/instagram-sm.png") no-repeat
-    background-size: cover
-    transition: .3s
-
-    +hov-inst

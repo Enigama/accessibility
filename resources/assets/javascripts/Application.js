@@ -34,38 +34,9 @@ class Application {
     this.initMobileSlideHistory();
     this.initEventSlick();
     this.initEvents();
-    //this.initSocial();
 
   }
 
-
-
-  /*initSocial(){
-
-          $('.social__img_vk').on('mouseover', function () {
-              $('.social__img_vk').attr('src','/assets/images/hover-vk.png');
-              //console.log(this);
-          });
-          $('.social__img_vk').on('mouseout', function () {
-              $('.social__img_vk').attr('src','/assets/images/vk-sm.png');
-          });
-
-          $('.social__img_fb').on('mouseover', function () {
-              $('.social__img_fb').attr('src','/assets/images/hover-fb.png');
-              //console.log(this);
-          });
-          $('.social__img_fb').on('mouseout', function () {
-              $('.social__img_fb').attr('src','/assets/images/facebook-sm.png');
-          });
-
-          $('.social__img_inst').on('mouseover', function () {
-              $('.social__img_inst').attr('src','/assets/images/hover-inst.png');
-              // console.log(this);
-          });
-          $('.social__img_inst').on('mouseout', function () {
-              $('.social__img_inst').attr('src','/assets/images/instagram-sm.png');
-          });
-  }*/
 
   initScrollY(){
     $('.full-history').mCustomScrollbar({
@@ -83,6 +54,13 @@ class Application {
 
 
   initHistory(){
+      
+  $('.logo__location').on('click', function(event){
+      event.preventDefault();
+      location.reload();
+  });
+      
+      
     $('.history__send').css('display', 'none');
     $('.history__chois').css('display', 'none');
     $('.history__text_top').css('display', 'none');
@@ -98,10 +76,6 @@ class Application {
     $('.simple__social').on('click', function (event) {
       event.preventDefault();
       if ($('.add-history').hasClass('add-history_disable')){
-
-          //$('.history-last').addClass('history-last_disable');
-          //$('.add-history').removeClass('add-history_disable');
-          //$('.add-history').addClass('add-history_active');
 
           $('.history__text_top').css('display', 'block');
 
