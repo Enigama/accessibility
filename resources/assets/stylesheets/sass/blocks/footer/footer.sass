@@ -74,27 +74,69 @@ footer
   +media-380
     font-size: 11vw
 
-.slider > .slick-prev, .slider > .slick-next
-  background: url("../../images/slide-arrow-left.png") no-repeat
+.emotions__prev, .emotions__next
+  position: absolute
+  display: block
+  background: url("../../images/sircle.png") no-repeat
+  background-size: cover
   height: 65px
   width: 65px
   z-index: 9999
   top: 33%
   transition: .3s
-
-  &:hover
-    transition: .3s
-    background: url("../../images/hover-slide-arrow-left.png") no-repeat
+  font-size: 25px
+  line-height: 65px
+  color: #9ecb33
+  
   &:focus
-    transition: .3s
-    background: url("../../images/slide-arrow-left.png") no-repeat
+    color: #9ecb33
+
+  +hov-icon
 
   +media-640
     top: 33%
 
+.emotions__prev
+  top: 25%
+  left: 30%
+
+  +media-900
+    left: 25%
+
+  +media-860
+    left: 25%
+
+  +media-768
+    left: 15%
+
+  +media-576
+    left: 10%
+
+  +media-500
+    display: none
+  
+.emotions__next
+  top: 25%
+  right: 30%
+
+  +media-900
+    right: 25%
+
+  +media-860
+    right: 25%
+
+  +media-768
+    right: 15%
+
+  +media-576
+    right: 10%
+
+  +media-500
+    display: none
+
+
 .slider .slick-prev::before
   display: none
-
 
 .emotions-slider > .slick-next
   display: none
@@ -105,7 +147,7 @@ footer
 .slider .slick-cloned
   display: none
 
-.slider .slick-prev
+//.slider .slick-prev
   left: 30%
 
   +media-860
@@ -120,7 +162,7 @@ footer
   +media-500
     display: none
 
-.slider .slick-next
+//.slider .slick-next
   right: 30%
   transform: rotate(180deg)
   transform-origin: 50% 21%

@@ -1,0 +1,6 @@
+
+.icon-left:before { content: '\21'; } /* '!' */
+.icon-right:before { content: '\22'; } /* '&quot;' */
+.icon-instagram:before { content: '\23'; } /* '#' */
+.icon-facebook:before { content: '\24'; } /* '$' */
+.icon-vkontakte:before { content: '\f189'; } /* '' */

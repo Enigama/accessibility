@@ -144,8 +144,8 @@ class Application {
       slidesToShow: 1,
       slidesToScroll: 1,
 
-      prevArrow: '<a href="#" class="history__prev"></a>',
-      nextArrow: '<a href="#" class="history__next"></a>',
+      prevArrow: '<a href="#" class="history__prev"><i class="icon-left"></i></a>',
+      nextArrow: '<a href="#" class="history__next"><i class="icon-right"></i></a>',
 
       responsive:[{
         breakpoints: 576,
@@ -169,6 +169,9 @@ class Application {
     $('.footer-slider').slick({
         dots: true,
         slidesToShow: 1,
+
+        prevArrow: '<a href="#" class="emotions__prev"><i class="icon-left"></i></a>',
+        nextArrow: '<a href="#" class="emotions__next"><i class="icon-right"></i></a>',
     });
 
   }
