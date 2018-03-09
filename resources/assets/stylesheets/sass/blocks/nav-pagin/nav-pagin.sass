@@ -43,6 +43,9 @@
       margin-left: 15px
       background: url("../../images/vertical-line.png")
 
+      +media-955
+        height: 46px
+        margin-left: 5px
 
 .nav__demo
   margin-right: 75px
@@ -51,6 +54,10 @@
 
   +media-1200
     margin-right: 35px
+
+  +media-915
+    margin-right: 15px
+
 
 
 .pagin__link
@@ -61,8 +68,14 @@
     font-size: 18px
     text-transform: uppercase
 
+    +media-915
+      font-size: 1.8vw
+
   &_md
     font-size: 20px
+
+    +media-915
+      font-size: 2vw
 
   &:hover
     text-decoration: none

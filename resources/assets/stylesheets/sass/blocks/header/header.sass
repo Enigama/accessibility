@@ -5,6 +5,10 @@
   +media-1024
     min-height: auto
 
+  +media-992
+    background-size: cover
+    justify-content: center
+
 .header-content
   display: flex
   padding-left: 20px
@@ -12,6 +16,18 @@
   +media-1024
     padding-bottom: 150px
 
+  +media-992
+    flex-direction: column
+    padding-bottom: 70px
+
+
+.left-content
+  +media-992
+    margin: 0 auto
+
+  +media-992
+    text-align: center
+    padding-bottom: 50px
 
 .left-content__title
   font-family: NexaL
@@ -28,6 +44,9 @@
   +media-1280
     font-size: 30px
 
+  +media-992
+    font-size: 5vw
+
 .left-content__title__second
   font-family: NexaB
   color: #101033
@@ -43,6 +62,9 @@
   +media-1280
     font-size: 38px
 
+  +media-992
+    font-size: 5vw
+
 .left-content__title__third
   font-family: NexaL
   font-size: 28px
@@ -54,6 +76,9 @@
   +media-1280
     font-size: 22px
 
+  +media-992
+    font-size: 2.5vw
+
 .text__indigo
   font-family: NexaB
   font-size: 30px
@@ -64,6 +89,9 @@
 
   +media-1280
     font-size: 22px
+
+  +media-992
+    font-size: 3vw
 
 .left-content__text
   padding-top: 10px
@@ -80,6 +108,10 @@
   +media-1024
     font-size: 16px
 
+  +media-992
+    font-size: 2vw
+
+
 .right-content
   position: relative
   width: 300px
@@ -91,6 +123,9 @@
   +media-1100
     margin-left: 0px
 
+  +media-992
+    margin: 0 auto
+
 .sircle
   position: absolute
   width: 171px
@@ -100,6 +135,9 @@
   display: flex
   flex-direction: column
   justify-content: center
+
+  +media-992
+    position: relative
 
   &-first
     left: 55%
