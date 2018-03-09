@@ -1,5 +1,6 @@
 .footer
-  background: url("../../images/footer-bg.png")
+  background: url("../../images/footer-bg.png") no-repeat
+  background-size: cover
   min-height: 485px
 
   +media-1024
@@ -9,6 +10,10 @@
 .footer-content
   display: flex
   justify-content: center
+
+  +media-768
+    flex-direction: column
+    justify-content: center
 
   //&-left
   //  width: 440px
@@ -23,12 +28,25 @@
     flex-direction: row
     margin-top: 70px
 
+    +media-768
+      margin: 0 auto
+
+    +media-576
+      flex-direction: column
+
 .testpng
   width: 30%
   height: 20%
   margin-top: 135px
 
+  +media-768
+    width: 50%
+    margin: 0 auto
+    padding-top: 50px
+    padding-bottom: 50px
 
+  +media-420
+    width: 80%
 
 .list
   list-style-type: none
@@ -92,6 +110,9 @@
   +media-992
     padding-left: 0
 
+  +media-768
+    padding-left: 10px
+
 .copyright
   display: flex
   justify-content: center
@@ -102,4 +123,7 @@
 
   +media-1582
     padding-top: 40px
+
+  +media-420
+    font-size: 13px
 

@@ -1,6 +1,7 @@
 .main-previu
   min-height: 768px
-  background: url("../../images/min-previu-bg.png")
+  background: url("../../images/min-previu-bg.png") no-repeat
+  background-size: cover
   padding-top: 115px
   padding-left: 0
   display: flex
@@ -11,6 +12,14 @@
 
   +media-1100
     min-height: 638px
+
+  +media-768
+    flex-direction: column
+    justify-content: center
+    padding-bottom: 50px
+
+  +media-420
+    padding-right: 0
 
 .main__left
   width: 790px
@@ -29,6 +38,14 @@
     width: 490px
     height: 400px
 
+  +media-768
+    width: 530px
+    margin: 0 auto
+
+  +media-560
+    width: 100%
+    background-size: cover
+
   &__title
     margin: 0 auto
     color: #fff
@@ -38,6 +55,15 @@
 
 .main__right
   padding-left: 30px
+
+  +media-768
+    margin: 0 auto
+    padding-top: 50px
+
+  +media-380
+    padding-left: 15px
+    padding-right: 15px
+
 
   &:after
     content: ''
@@ -71,6 +97,9 @@
     +media-1100
       margin-top: 0
 
+    +media-768
+      font-size: 5vw
+
   &__second
     font-family: NexaB
     font-size: 48px
@@ -84,6 +113,9 @@
     +media-1400
       font-size: 36px
 
+    +media-768
+      font-size: 6vw
+
 .main__text__previu
   padding-top: 28px
 
@@ -92,6 +124,9 @@
 
   +media-1024
     font-size: 20px
+
+  +media-768
+    font-size: 3.7vw
 
 .main__text__indigo
   +media-1582
@@ -102,6 +137,9 @@
 
   +media-1024
     font-size: 26px
+
+  +media-768
+    font-size: 4vw
 
 .main__text
   font-family: PTS-r
@@ -117,10 +155,22 @@
   +media-1024
     font-size: 13px
 
+  +media-768
+    font-size: 2vw
+
+  +media-576
+    font-size: 2.4vw
+
+  +media-420
+    font-size: 3vw
+
 .main-info
   text-align: center
   padding-top: 110px
-  
+
+  +media-420
+    padding-top: 50px
+
   &__title_first
     font-family: NexaL
     font-size: 40px
@@ -134,6 +184,9 @@
 
     +media-890
       font-size: 4vw
+
+    +media-420
+      font-size: 7vw
 
   &__title_second
     font-family: NexaB
@@ -149,6 +202,8 @@
     +media-890
       font-size: 5vw
 
+    +media-420
+      font-size: 7vw
 
     &:after
       content: ''
@@ -172,6 +227,12 @@
     +media-890
       font-size: 3.5vw
 
+    +media-768
+      font-size: 2.4vw
+
+    +media-576
+      font-size: 4vw
+
 .list-content
   display: flex
 
@@ -186,6 +247,12 @@
     &_inversion
       padding-top: 75px
       padding-left: 25px
+
+      +media-560
+        padding-left: 215px
+
+      +media-500
+        padding-left: 0
 
   &__title
     font-family: NexaL
@@ -225,6 +292,12 @@
       +media-810
         width: 630px
 
+      +media-740
+        width: 600px
+
+      +media-660
+        width: 90vw
+
   &__title_inversion
     &:after
       content: ''
@@ -252,6 +325,16 @@
       +media-810
         width: 590px
 
+      +media-740
+        width: 540px
+
+      +media-660
+        width: 77vw
+
+      +media-500
+        width: 100%
+        margin-left: 0
+
   &__text
     font-family: PTS-r
     font-size: 22px
@@ -262,6 +345,9 @@
 
     +media-992
       font-size: 2vw
+
+    +media-500
+      font-size: 3vw
 
   &-right
     //background: url("../../images/right-pc.png")
@@ -276,7 +362,9 @@
     +media-1100
       width: 35%
       height: 30%
-      //margin-left: -170px
+
+    +media-560
+      display: none
 
     &_inversion
       //background: url("../../images/left-pc.png")
@@ -289,12 +377,23 @@
       +media-890
         margin-left: 0
 
+
+
 .block-help
   background: url("../../images/help-bg.png") center
   min-height: 322px
   display: flex
   justify-content: center
   flex-direction: column
+  margin-top: 125px
+
+  +media-768
+    margin-top: 0
+
+  +media-420
+    min-height: 225px
+
+
 
   &-content
     display: flex
@@ -311,6 +410,12 @@
     +media-1582
       font-size: 25px
 
+    +media-740
+      font-size: 3vw
+
+    +media-420
+      font-size: 4vw
+
   &__black
     font-family: NexaB
     font-size: 27px
@@ -318,6 +423,11 @@
 
     +media-1582
       font-size: 25px
+    +media-740
+      font-size: 3vw
+
+    +media-420
+      font-size: 4vw
 
   &__succ
     font-family: NexaB
@@ -327,12 +437,24 @@
     +media-1582
       font-size: 31px
 
+    +media-768
+      font-size: 26px
+
+    +media-740
+      font-size: 3vw
+
+    +media-420
+      font-size: 4vw
+
 .block-identify
   background: #fff
   display: flex
   justify-content: center
   flex-direction: column
   padding-top: 120px
+
+  +media-660
+    padding-top: 45px
 
 .identify-text
   text-align: center
@@ -349,6 +471,9 @@
     +media-1400
       font-size: 32px
 
+    +media-420
+      font-size: 28px
+
   &__second
     font-size: 48px
     color: #00b0ff
@@ -359,6 +484,9 @@
 
     +media-1400
       font-size: 40px
+
+    +media-420
+      font-size: 38px
 
     &:after
       content: ''
@@ -379,11 +507,24 @@
   +media-1400
     font-size: 22px
 
+  +media-768
+    font-size: 2.4vw
+
+  +media-576
+    font-size: 4vw
+
 .block-icon
   display: flex
   justify-content: center
   padding-top: 50px
   padding-bottom: 120px
+
+  +media-660
+    padding-bottom: 45px
+
+  +media-420
+    flex-direction: column
+    justify-content: center
 
 .icon
   width: 292px
@@ -418,6 +559,21 @@
   +media-992
     width: 20vw
     height: 20vh
+
+  +media-768
+    height: 16vh
+
+  +media-660
+    height: 14vh
+
+  +media-500
+    height: 10vh
+    width: 17vw
+
+  +media-420
+    margin: 0 auto
+    width: 35vw
+    height: 15vh
 
   &__item__text
     margin: 0 auto
@@ -456,6 +612,10 @@
   +media-992
     font-size: 2vw
 
+  +media-420
+    padding-top: 5px
+    font-size: 4vw
+
 .text_sub__second
   font-size: 46px
   margin-top: -20px
@@ -476,6 +636,9 @@
 
   +media-992
     font-size:  2.5vw
+
+  +media-420
+    font-size: 5vw
 
 
 
