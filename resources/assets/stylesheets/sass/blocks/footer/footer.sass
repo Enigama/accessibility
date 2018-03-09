@@ -1,0 +1,98 @@
+.footer
+  background: url("../../images/footer-bg.png")
+  min-height: 485px
+
+  +media-1024
+    min-height: auto
+    padding-bottom: 50px
+
+.footer-content
+  display: flex
+  justify-content: center
+
+  //&-left
+  //  width: 440px
+  //  height: 125px
+  //  background: url("../../images/footer-logo.png")
+  //  background-size: cover
+  //  margin-top: 135px
+
+  &-right
+    display: flex
+    justify-content: center
+    flex-direction: row
+    margin-top: 70px
+
+.testpng
+  width: 30%
+  height: 20%
+  margin-top: 135px
+
+
+
+.list
+  list-style-type: none
+
+  li
+    padding-bottom: 5px
+
+
+.solutions__item:first-child, .help-footer__item:first-child, .company__item:first-child
+  margin-bottom: 15px
+  &:after
+    content: ''
+    display: block
+    background: #fff
+    opacity: 0.25
+    width: 170px
+    height: 1px
+    margin: 15px auto 0 0
+
+.active__item__link
+  color: #fff
+  font-family: NexaB
+  font-size: 24px
+  transition: .3s
+
+  +media-1582
+    font-size: 22px
+
+  &:hover
+    text-decoration: none
+    transition: .3s
+    cursor: default
+    color: #fff
+
+.item__link
+  color: #fff
+  font-family: NexaL
+  font-size: 20px
+  transition: .3s
+  padding-left: 15px
+  opacity: 0.85
+
+  +media-1582
+    font-size: 18px
+
+  +media-1100
+    font-size: 16px
+
+  +media-1024
+    font-size: 14px
+
+  &:hover
+    text-decoration: none
+    color: #101033
+    transition: .3s
+
+.copyright
+  display: flex
+  justify-content: center
+  font-family: NexaL
+  font-size: 18px
+  color: #fff
+  padding-top: 25px
+
+  +media-1582
+    padding-top: 40px
+

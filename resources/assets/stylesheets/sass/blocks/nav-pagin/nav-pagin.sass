@@ -1,0 +1,73 @@
+.block-pagin
+  display: flex
+  flex-direction: column
+
+  &:after
+    content: ''
+    display: block
+    background: #fff
+    height: 3px
+    width: 1243px
+    margin-top: 30px
+    margin-left: 20px
+    opacity: .25
+
+    +media-1280
+      width: 97%
+    +media-1200
+      width: 99%
+      margin-left: 0
+
+.nav-pagin
+  list-style-type: none
+  display: flex
+  flex-direction: row
+  justify-content: left
+  padding-top: 30px
+  padding-left: 20px
+
+  +media-1200
+    padding-left: 0
+
+.nav__pagin
+  margin-right: 5px
+  //padding: 10px 15px
+  display: flex
+
+  &__vline
+    &:after
+      content: ''
+      display: inline-block
+      width: 3px
+      height: 36px
+      margin-left: 15px
+      background: url("../../images/vertical-line.png")
+
+
+.nav__demo
+  margin-right: 75px
+  background: #101033
+  border-radius: 0px 10px 0px 10px
+
+  +media-1200
+    margin-right: 35px
+
+
+.pagin__link
+  color: #fff
+  padding: 10px 15px
+
+  &_sm
+    font-size: 18px
+    text-transform: uppercase
+
+  &_md
+    font-size: 20px
+
+  &:hover
+    text-decoration: none
+    background: #101033
+    color: #fff
+    //padding: 10px 15px
+    border-radius: 0px 10px 0px 10px
+    transition: .3s

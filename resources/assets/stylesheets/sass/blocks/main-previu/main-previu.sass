@@ -1,0 +1,434 @@
+.main-previu
+  min-height: 768px
+  background: url("../../images/min-previu-bg.png")
+  padding-top: 115px
+  padding-left: 0
+  display: flex
+  position: relative
+
+  +media-1280
+    min-height: 738px
+
+  +media-1100
+    min-height: 638px
+
+.main__left
+  width: 790px
+  height: 540px
+  background: url("../../images/picture.png")
+  display: flex
+  justify-content: center
+  flex-direction: column
+  color: rebeccapurple
+
+  +media-1280
+    width: 590px
+    height: 500px
+
+  +media-1100
+    width: 490px
+    height: 400px
+
+  &__title
+    margin: 0 auto
+    color: #fff
+    text-transform: uppercase
+    font-family: PTS-r
+    opacity: 0.5
+
+.main__right
+  padding-left: 30px
+
+  &:after
+    content: ''
+    display: inline-block
+    background: #fff
+    width: 52% //1018px
+    height: 3px
+    position: absolute
+    left: 32%
+    margin-top: 23px
+
+    +media-1582
+      width: 60%
+
+    +media-1024
+      display: none
+
+.main__title
+  &__first
+    font-family: NexaL
+    font-size: 40px
+    color: #fff
+    margin-bottom: 0
+
+    +media-1582
+      font-size: 36px
+
+    +media-1400
+      font-size: 30px
+
+    +media-1100
+      margin-top: 0
+
+  &__second
+    font-family: NexaB
+    font-size: 48px
+    color: #00b0ff
+    margin-top: 0
+    padding-bottom: 0
+
+    +media-1582
+      font-size: 44px
+
+    +media-1400
+      font-size: 36px
+
+.main__text__previu
+  padding-top: 28px
+
+  +media-1582
+    font-size: 24px
+
+  +media-1024
+    font-size: 20px
+
+.main__text__indigo
+  +media-1582
+    font-size: 36px
+
+  +media-1400
+    font-size: 30px
+
+  +media-1024
+    font-size: 26px
+
+.main__text
+  font-family: PTS-r
+  font-size: 20px
+  color: #fff
+
+  +media-1582
+    font-size: 17px
+
+  +media-1400
+    font-size: 15px
+
+  +media-1024
+    font-size: 13px
+
+.main-info
+  text-align: center
+  padding-top: 110px
+  
+  &__title_first
+    font-family: NexaL
+    font-size: 40px
+    color: #101033
+
+    +media-1582
+      font-size: 36px
+
+    +media-1400
+      font-size: 32px
+
+  &__title_second
+    font-family: NexaB
+    font-size: 48px
+    color: #00b0ff
+
+    +media-1582
+      font-size: 44px
+
+    +media-1400
+      font-size: 40px
+
+    &:after
+      content: ''
+      display: block
+      width: 204px
+      height: 3px
+      background: #e2e2e2
+      margin: 30px auto
+
+  &__text
+    font-family: NexaL
+    font-size: 30px
+    color: #626262
+
+    +media-1582
+      font-size: 26px
+
+    +media-1400
+      font-size: 22px
+
+.list-content
+  display: flex
+
+  +media-1582
+    padding-bottom: 75px
+
+
+  &-left
+    z-index: 2
+    padding-top: 109px
+
+    &_inversion
+      padding-top: 75px
+      padding-left: 25px
+
+  &__title
+    font-family: NexaL
+    font-size: 40px
+    color: #101033
+    margin-bottom: 0
+
+    +media-1582
+      font-size: 36px
+
+    +media-1400
+      font-size: 32px
+
+  &__title_sub
+    font-family: NexaB
+    font-size: 48px
+    color: #00b0ff
+
+    +media-1582
+      font-size: 44px
+
+    +media-1400
+      font-size: 40px
+
+    &:after
+      content: ''
+      display: block
+      background: url("../../images/line.png")
+      width: 748px
+      height: 15px
+      z-index: 1
+  &__title_inversion
+    &:after
+      content: ''
+      display: block
+      background: url("../../images/reserv-line.png")
+      //transform: rotate(180deg)
+      width: 748px
+      height: 15px
+      margin-left: -95px
+      z-index: 1
+
+      +media-1280
+        margin-left: -180px
+
+      +media-1100
+        width: 700px
+        margin-left: -140px
+
+      +media-1024
+        width: 650px
+
+  &__text
+    font-family: PTS-r
+    font-size: 22px
+    color: #626262
+
+    +media-1582
+      font-size: 20px
+
+  &-right
+    //background: url("../../images/right-pc.png")
+    //width: 437px
+    //height: 437px
+    margin-top: 115px
+    margin-left: -120px
+
+    +media-1100
+      width: 35%
+      height: 30%
+      //margin-left: -170px
+
+    &_inversion
+      //background: url("../../images/left-pc.png")
+      margin-left: 70px
+      margin-top: 65px
+
+.block-help
+  background: url("../../images/help-bg.png") center
+  min-height: 322px
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+  &-content
+    display: flex
+    flex-direction: column
+
+.help__text
+  margin: 0 auto
+  padding-bottom: 25px
+  &__silv
+    font-family: NexaL
+    font-size: 27px
+    color: #626262
+
+    +media-1582
+      font-size: 25px
+
+  &__black
+    font-family: NexaB
+    font-size: 27px
+    color: inherit
+
+    +media-1582
+      font-size: 25px
+
+  &__succ
+    font-family: NexaB
+    font-size: 33px
+    color: #00b0ff
+
+    +media-1582
+      font-size: 31px
+
+.block-identify
+  background: #fff
+  display: flex
+  justify-content: center
+  flex-direction: column
+  padding-top: 120px
+
+.identify-text
+  text-align: center
+  font-family: NexaB
+  
+  &__first
+    font-size: 40px
+    color: #101033
+    margin-bottom: 0
+
+    +media-1582
+      font-size: 36px
+
+    +media-1400
+      font-size: 32px
+
+  &__second
+    font-size: 48px
+    color: #00b0ff
+    margin-top: 0
+
+    +media-1582
+      font-size: 44px
+
+    +media-1400
+      font-size: 40px
+
+    &:after
+      content: ''
+      display: block
+      width: 204px
+      height: 3px
+      background: #e2e2e2
+      margin: 30px auto
+
+.identify__previu
+  font-family: NexaL
+  font-size: 30px
+  color: #626262
+
+  +media-1582
+    font-size: 26px
+
+  +media-1400
+    font-size: 22px
+
+.block-icon
+  display: flex
+  justify-content: center
+  padding-top: 50px
+  padding-bottom: 120px
+
+.icon
+  width: 292px
+  height: 292px
+  background: #e2e2e2
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  flex-direction: column
+  margin-right: 88px
+  margin-left: 88px
+  margin-bottom: 25px
+
+  +media-1400
+    width: 272px
+    height: 272px
+    margin-left: 65px
+    margin-right: 65px
+
+  +media-1280
+    width: 252px
+    height: 252px
+    margin-left: 45px
+    margin-right: 45px
+
+  +media-1024
+    width: 232px
+    height: 232px
+    margin-left: 35px
+    margin-right: 35px
+
+  &__item__text
+    margin: 0 auto
+    text-transform: uppercase
+    font-family: NexaL
+    font-size: 48px
+    color: #fff
+
+    +media-1582
+      font-size: 40px
+
+
+    &_sub
+      display: flex
+      justify-content: center
+      flex-direction: column
+      text-align: center
+      font-family: NexaB
+      text-transform: uppercase
+      color: #00b0ff
+
+.text_sub__first
+  font-size: 36px
+
+  +media-1582
+    font-size: 26px
+
+  +media-1440
+    font-size: 24px
+
+  +media-1024
+    font-size: 20px
+
+.text_sub__second
+  font-size: 46px
+  margin-top: -20px
+
+  +media-1582
+    margin-top: -10px
+    font-size: 36px
+
+  +media-1440
+    font-size:  34px
+
+  +media-1280
+    font-size:  30px
+
+  +media-1024
+    margin-top: 0px
+    font-size:  26px
+
+
+
+

@@ -8,7 +8,6 @@
   },
   "author": "",
   "dependencies": {
-    "aos": "^2.2.0",
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -25,7 +24,6 @@
     "html-loader": "^0.5.1",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.0",
-    "jquery-parallax.js": "^1.5.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "node-bourbon": "^4.2.8",
     "node-reset-scss": "^1.0.1",
@@ -33,12 +31,8 @@
     "nunjucks": "^3.0.1",
     "nunjucks-html-loader": "^1.1.0",
     "postcss-loader": "^2.0.10",
-    "rellax": "^1.4.0",
     "sass-loader": "^6.0.6",
-    "slick-carousel": "^1.8.1",
-    "smoothscroll-for-websites": "^1.4.6",
     "style-loader": "^0.18.2",
-    "vinyl-ftp": "^0.6.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   }

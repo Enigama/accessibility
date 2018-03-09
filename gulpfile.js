@@ -4,10 +4,10 @@ const gulp              = require('gulp');
 const gutil             = require('gulp-util');
 const webpack           = require('webpack');
 const webpackDevServer  = require('webpack-dev-server');
-const ftp               = require('vinyl-ftp');
+//const ftp               = require('vinyl-ftp');
 
 
-const config = {
+/*const config = {
     build: 'build',
     src: 'resources',
 
@@ -25,7 +25,7 @@ const config = {
             dir:        'DIR'
         }
     }
-};
+};*/
 
 gulp.task("webpack", function(callback) {
     // run webpack
@@ -92,7 +92,7 @@ gulp.task('dev', ['webpack-dev-server']);
 
 gulp.task('build', ['webpack']);
 
-gulp.task('deploy:dev', ['build'], function () {
+/*gulp.task('deploy:dev', ['build'], function () {
     const conn = ftp.create({
         host:     config.deploy.dev.host,
         user:     config.deploy.dev.user,
@@ -100,13 +100,14 @@ gulp.task('deploy:dev', ['build'], function () {
         parallel: 10
     });
     const globs = [
-        config.build + '/**/*',
+        config.build + '/!**!/!*',
     ];
     return gulp.src(globs, { base: config.build, buffer: false })
         .pipe(conn.newer(config.deploy.dev.dir))
         .pipe(conn.dest(config.deploy.dev.dir));
-});
+});*/
 
+/*
 gulp.task('deploy:prod', ['build'], function () {
     const conn = ftp.create({
         host:     config.deploy.prod.host,
@@ -115,9 +116,9 @@ gulp.task('deploy:prod', ['build'], function () {
         parallel: 10
     });
     const globs = [
-        config.build + '/**/*',
+        config.build + '/!**!/!*',
     ];
     return gulp.src(globs, { base: config.build, buffer: false })
         .pipe(conn.newer(config.deploy.prod.dir))
         .pipe(conn.dest(config.deploy.prod.dir));
-});
+});*/
