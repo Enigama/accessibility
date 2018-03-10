@@ -92,20 +92,20 @@ gulp.task('dev', ['webpack-dev-server']);
 
 gulp.task('build', ['webpack']);
 
-/*gulp.task('deploy:dev', ['build'], function () {
-    const conn = ftp.create({
+gulp.task('deploy:dev', ['build'], function () {
+    /*const conn = ftp.create({
         host:     config.deploy.dev.host,
         user:     config.deploy.dev.user,
         password: config.deploy.dev.password,
         parallel: 10
-    });
+    });*/
     const globs = [
         config.build + '/!**!/!*',
     ];
     return gulp.src(globs, { base: config.build, buffer: false })
         .pipe(conn.newer(config.deploy.dev.dir))
         .pipe(conn.dest(config.deploy.dev.dir));
-});*/
+});
 
 /*
 gulp.task('deploy:prod', ['build'], function () {

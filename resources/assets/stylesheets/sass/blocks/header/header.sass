@@ -1,6 +1,8 @@
 .header-block
   background: url("../../images/header-bg.png") no-repeat
   min-height: 768px
+  background-size: cover
+
 
   +media-1024
     min-height: auto
@@ -129,8 +131,17 @@
   +media-1582
     font-size: 20px
 
+  +media-1440
+    font-size: 19px
+
+  +media-1315
+    font-size: 18px
+
   +media-1280
     font-size: 18px
+
+  //+media-1170
+    font-size: 17px
 
   +media-1024
     font-size: 16px
@@ -153,7 +164,10 @@
   +media-1280
     margin-left: 50px
 
-  +media-1100
+  +media-1211
+    margin-left: 0
+
+  //+media-1100
     margin-left: 0px
 
   +media-992
@@ -168,6 +182,7 @@
   display: flex
   flex-direction: column
   justify-content: center
+  z-index: 2
 
   +media-992
     position: relative
@@ -187,8 +202,8 @@
       left: 8%
 
   &-third
-    top: 65%
-    left: 55%
+    top: 64%
+    left: 57%
 
     +media-380
       left: 35%
@@ -250,6 +265,70 @@
   content: 'img3'
   margin-top: -105px
   margin-left: -15px
+
+.shadow
+  position: relative
+
+.shadow:after
+  z-index: 1
+  content: ''
+  display: block
+  position: absolute
+  width: 400px
+  height: 350px
+  background: url("../../images/sh1.png") no-repeat
+
+  +media-1200
+    display: none
+
+
+.shadow-f:after
+  //background: url("../../images/sh1.png") no-repeat
+  left: 60%
+  margin-top: 83px
+
+  +media-1582
+    left: 61%
+
+  +media-1345
+    left: 62%
+
+  +media-1280
+    width: 100%
+
+
+
+.shadow-s:after
+  left: 11%
+  margin-top: 195px
+
+  +media-1582
+    left: 11%
+    margin-top: 180px
+
+  +media-1345
+    left: 13%
+
+  +media-1280
+    margin-top: 170px
+    width: 100%
+
+
+.shadow-t:after
+  left: 61%
+  margin-top: 290px
+
+  +media-1582
+    left: 68%
+
+  +media-1345
+    margin-top: 272px
+    left: 65%
+    width: 365px
+
+  +media-1280
+    width: 100%
+    margin-top: 250px
 
 
 
