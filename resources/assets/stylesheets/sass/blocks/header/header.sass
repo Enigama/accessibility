@@ -228,7 +228,7 @@
     //text-transform: uppercase
     //color: #101033
 
-  &:after
+  //&:after
     content: ''
     display: inline-block
     position: absolute
@@ -243,7 +243,7 @@
   right: 75%
   top: 13%
 
-.sircle-first:after
+//.sircle-first:after
   content: 'img2'
   margin-top: -75px
   margin-left: -50px
@@ -251,17 +251,43 @@
 .sircle-second:before
   right: 65%
   top: -10%
+.outs
+  position: absolute
+  font-family: NexaB
+  font-size: 24px
+  text-transform: uppercase
+  color: #101033
 
-.sircle-second:after
+  &__first
+    margin-left: -50px
+    margin-top: -75px
+
+  &__second
+    margin-left: -32px
+    margin-top: -115px
+
+  &__third
+    margin-left: -15px
+    margin-top: -105px
+
+//.sircle-second:after
   content: 'img1'
   margin-top: -115px
   margin-left: -35px
+
+@-moz-document url-prefix()
+  .outs__first
+    margin-top: -155px
+  .outs__second
+    margin-top: -235px
+  .outs__third
+    margin-top: -215px
 
 .sircle-third:before
   right: 55%
   top: -5%
 
-.sircle-third:after
+//.sircle-third:after
   content: 'img3'
   margin-top: -105px
   margin-left: -15px
