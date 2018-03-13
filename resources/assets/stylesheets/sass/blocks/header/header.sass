@@ -293,9 +293,41 @@
   margin-left: -15px
 
 .shadow
+  z-index: 1
+  content: ''
+  position: absolute
+  //left: 50%
+  display: block
+  background: linear-gradient(to right, rgba(0, 0, 0, .3) 0%, transparent 100%)
+  transform-origin: left
+  width: 400px
+  height: 170px
+  transform: rotate(45deg)
+
+  +media-1315
+    width: 300px
+  +media-1211
+    width: 250px
+  +media-1170
+    width: 200px
+  +media-1152
+    display: none
+
+  &-f
+    left: 30%
+    top: 38%
+  &-s
+    left: 79%
+    top: 12%
+  &-t
+    left: 88%
+    top: 66%
+
+
+//.shadow
   position: relative
 
-.shadow:after
+//.shadow:after
   z-index: 1
   content: ''
   display: block
@@ -308,7 +340,7 @@
     display: none
 
 
-.shadow-f:after
+//.shadow-f:after
   //background: url("../../images/sh1.png") no-repeat
   left: 60%
   margin-top: 83px
@@ -324,7 +356,7 @@
 
 
 
-.shadow-s:after
+//.shadow-s:after
   left: 11%
   margin-top: 195px
 
@@ -340,7 +372,7 @@
     width: 100%
 
 
-.shadow-t:after
+//.shadow-t:after
   left: 61%
   margin-top: 290px
 
