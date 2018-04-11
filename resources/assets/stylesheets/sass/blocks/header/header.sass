@@ -1,8 +1,8 @@
 .header-block
   background: url("../../images/header-bg.png") no-repeat
-  min-height: 768px
+  //min-height: 768px
   background-size: cover
-
+  padding-bottom: 72px
 
   +media-1024
     min-height: auto
@@ -15,8 +15,11 @@
   display: flex
   padding-left: 20px
 
+  &-scroll
+    padding-top: 180px
+
   +media-1024
-    padding-bottom: 150px
+    padding-bottom: 50px
 
   +media-992
     flex-direction: column
@@ -215,18 +218,30 @@
     text-transform: uppercase
     text-align: center
     color: #ababab
+.line-svg
+  position: absolute
+  &-f
+    left: -30%
+    top: 13%
+  &-s
+    left: -20%
+    top: -10%
+  &-t
+    left: -9%
+    top: -5%
 
-  &:before
-    content: ''
-    display: inline-block
-    width: 93px
-    height: 56px
-    background: url("../../images/rectangl.svg")
-    position: absolute
-    //font-family: NexaB
-    //font-size: 24px
-    //text-transform: uppercase
-    //color: #101033
+
+//&:before
+  content: ''
+  display: inline-block
+  width: 93px
+  height: 56px
+  background: url("../../images/rectangl.svg")
+  position: absolute
+  //font-family: NexaB
+  //font-size: 24px
+  //text-transform: uppercase
+  //color: #101033
 
   //&:after
     content: ''
@@ -306,6 +321,8 @@
 
   +media-1315
     width: 300px
+  +media-1235
+    width: 230px
   +media-1211
     width: 250px
   +media-1170
@@ -322,6 +339,10 @@
   &-t
     left: 88%
     top: 66%
+
+    +media-1235
+      left: 84%
+      top: 63%
 
 
 //.shadow
